@@ -25,13 +25,13 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
-                <li class="nav-item">
-                  <%= link_to constructions_path, class:"nav-link link text-white display-4" do %>
+                <li class="nav-item active">
+                  <%= link_to constructions_path, class:"nav-link link display-4" do %>
                     <%= t('navbar.construction.').upcase %>
                   <% end %>
                 </li>
                 <li class="nav-item">
-                  <%= link_to constructions_path, class:"nav-link text-white link display-4" do %>
+                  <%= link_to factories_path, class:"nav-link text-white link display-4" do %>
                     <%= t('navbar.factory.').upcase %>
                   <% end %>
                 </li>

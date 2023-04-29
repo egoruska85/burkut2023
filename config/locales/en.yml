@@ -31,3 +31,6 @@
 
 en:
   hello: "Hello world"
+  navbar:
+    construction: "construction"
+    factory: "factory"
