@@ -34,3 +34,5 @@ en:
   navbar:
     construction: "construction"
     factory: "factory"
+    confectionery_factory: "confectionery_factory"
+    ip: "individual enterprise"
