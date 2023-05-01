@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :set_locale
-  
+  before_action :set_locale, :set_variable
+
   private
 
   def set_locale
@@ -14,6 +14,20 @@ class ApplicationController < ActionController::Base
   def default_url_options
     { locale: I18n.locale }
   end
+  def set_variable
+  #@organization = Organization.first
+    @a = -1
+    @time = Time.now
+    @main_carousel = Maincarousel.where(id: 2..100)
+
+    @main_carousel_active = Maincarousel.first
+
+    @main_logo = Logo.where(main: true)
+    @main_logo.each do |logo|
+      @logo_main = logo 
+    end
+  end
+
 
   protected
   def configure_permitted_parameters

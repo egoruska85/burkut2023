@@ -16,9 +16,7 @@
 
           </span>
 
-          <%= link_to factories_path, class:"nav-link", style:"font-family: bankgothic; font-weight: 900; font-size: 20px; color: white;" do %>
-            <%= t('navbar.confectionery_factory')%>
-          <% end %>
+
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <div class="hamburger">
@@ -29,6 +27,9 @@
               </div>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <%= link_to factories_path, class:"nav-link", style:"font-family: bankgothic; font-weight: 900; font-size: 15px; color: white;" do %>
+              <%= t('navbar.confectionery_factory')%>
+            <% end %>
               <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
                 <li class="nav-item active">
                   <%= link_to constructions_path, class:"nav-link text-white link display-4" do %>

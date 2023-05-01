@@ -1,0 +1,74 @@
+
+<section data-bs-version="5.1" class="slider1 cid-tCPWTDL2nm" id="slider1-n">
+
+    <div class="carousel slide" id="tCPY6cN08F" data-interval="5000" data-bs-interval="5000">
+        <ol class="carousel-indicators">
+            <li data-slide-to="0" data-bs-slide-to="0" class="active" data-target="#tCPY6cN08F" data-bs-target="#tCPY6cN08F"></li>
+            <% @main_carousel.each do |i| %>
+
+
+
+
+            <li data-slide-to="1" data-bs-slide-to="<%= @a + i.id %>" data-target="#tCO4ywlwbY" data-bs-target="#tCPY6cN08F"></li>
+
+            <% end %>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item slider-image item active">
+                <div class="item-wrapper">
+                    <%= image_tag(@main_carousel_active.image, class:"d-block w-100", alt:"...") %>
+
+                    <div class="carousel-caption">
+                        <h5 class="mbr-section-subtitle mbr-fonts-style display-5">
+                            <strong>
+                              <%= @main_carousel_active.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' and params[:locale] != 'en' %>
+                              <%= @main_carousel_active.title_ru if params[:locale] == 'ru' %>
+                              <%= @main_carousel_active.title_en if params[:locale] == 'en' %>
+                              <%= @main_carousel_active.title_tm if params[:locale] == 'tm' %>
+                            </strong>
+                        </h5>
+                        <p class="mbr-section-text mbr-fonts-style display-7">
+                          <%= @main_carousel_active.body_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' and params[:locale] != 'en' %>
+                          <%= @main_carousel_active.body_ru if params[:locale] == 'ru' %>
+                          <%= @main_carousel_active.body_en if params[:locale] == 'en' %>
+                          <%= @main_carousel_active.body_tm if params[:locale] == 'tm' %>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <% @main_carousel.each do |carousel| %>
+            <div class="carousel-item slider-image item">
+                <div class="item-wrapper">
+
+                    <%= image_tag(carousel.image, class:"d-block w-100", alt:"...") %>
+                    <div class="carousel-caption">
+                        <h5 class="mbr-section-subtitle mbr-fonts-style display-5">
+                            <strong>
+                              <%= carousel.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' and params[:locale] != 'en' %>
+                              <%= carousel.title_ru if params[:locale] == 'ru' %>
+                              <%= carousel.title_en if params[:locale] == 'en' %>
+                              <%= carousel.title_tm if params[:locale] == 'tm' %>
+                            </strong>
+                        </h5>
+                        <p class="mbr-section-text mbr-fonts-style display-7">
+                          <%= carousel.body_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' and params[:locale] != 'en' %>
+                          <%= carousel.body_ru if params[:locale] == 'ru' %>
+                          <%= carousel.body_en if params[:locale] == 'en' %>
+                          <%= carousel.body_tm if params[:locale] == 'tm' %>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+
+        </div>
+        <a class="carousel-control carousel-control-prev" role="button" data-slide="prev" data-bs-slide="prev" href="#tCPY6cN08F">
+            <span class="mobi-mbri mobi-mbri-arrow-prev" aria-hidden="true"></span>
+            <span class="sr-only visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control carousel-control-next" role="button" data-slide="next" data-bs-slide="next" href="#tCPY6cN08F">
+            <span class="mobi-mbri mobi-mbri-arrow-next" aria-hidden="true"></span>
+            <span class="sr-only visually-hidden">Next</span>
+        </a>
+    </div>
+</section>
