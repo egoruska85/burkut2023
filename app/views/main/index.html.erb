@@ -1,82 +1,51 @@
-<head>
-  <link rel="stylesheet" href="/assets/web/assets/mobirise-icons2/mobirise2.css">
-  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="/assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="/assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="/assets/theme/css/style.css">
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="/assets/mobirise/css/mbr-additional.css">
-  <link rel="stylesheet" href="/assets/mobirise/css/mbr-additional.css" type="text/css">
-</head>
-<body>
-  <%= render '/main/navbar/navbar' %>
-
-
-    <%= render '/main/carousel' %>
-
-
-    <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
-      <section data-bs-version="5.1" class="info3 cid-tCQ0VOiKWs mbr-parallax-background" id="info3-p">
 
 
 
 
-        <div class="mbr-overlay" style="opacity: 0.2; background-color: rgb(35, 35, 35);">
-        </div>
-
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="card col-12 col-lg-10">
-                  <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
-                    <div class="card-wrapper" style="background: grey;">
-                        <div class="card-box align-center">
-                            <h4 class="card-title mbr-fonts-style align-center mb-4 display-1 text-black">
-                                <strong>
-                                  <%= @mainabout.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' and params[:locale] != 'en' %>
-                                  <%= @mainabout.title_ru if params[:locale] == 'ru' %>
-                                  <%= @mainabout.title_en if params[:locale] == 'en' %>
-                                  <%= @mainabout.title_tm if params[:locale] == 'tm' %>
-                                </strong>
-                            </h4>
-                            <p class="mbr-text mbr-fonts-style mb-4 display-7 text-black">
-                              <%= simple_format @mainabout.body_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' and params[:locale] != 'en' %>
-                              <%= simple_format @mainabout.body_ru if params[:locale] == 'ru' %>
-                              <%= simple_format @mainabout.body_en if params[:locale] == 'en' %>
-                              <%= simple_format @mainabout.body_tm if params[:locale] == 'tm' %>
-                            </p>
-
-                        </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    </div>
 
 
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br
-  ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/assets/smoothscroll/smooth-scroll.js"></script>
-  <script src="/assets/ytplayer/index.js"></script>
-  <script src="/assets/dropdown/js/navbar-dropdown.js"></script>
-  <script src="/assets/theme/js/script.js"></script>
-  <section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;">
-    <a href="https://mobiri.se/2171210" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;">
-      <img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
-    </a>
+<div class="modal_1" id="openModal-1">
+  <div class="modal_1-window">
+    <center>
+    <h3 style="font-family: bankgothic; font-weight: 900; font-size: 50px;">
+      BURKUT
+    </h3>
+    </center>
+      <%= link_to constructions_path, class:"btn btn-primary", style:"font-family: bankgothic; font-weight: 900; font-size: 15px; width: 300px;"  do %>
+        <%= image_tag(@logo_main.logo, style:"height: 3.8rem;", align:"left") %>
+        <%= t('navbar.construction')%>
+      <% end %>
 
-    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/parallax/jarallax.js"></script>
-    <script src="assets/smoothscroll/smooth-scroll.js"></script>
-    <script src="assets/ytplayer/index.js"></script>
-    <script src="assets/dropdown/js/navbar-dropdown.js"></script>
-    <script src="assets/theme/js/script.js"></script>
-</body>
+      <%= link_to factories_path, class:"btn btn-danger", style:"font-family: bankgothic; font-weight: 900; font-size: 15px; width: 300px;" do %>
+        <%= image_tag(@logotype.logo, style:"height: 3.8rem;", align:"left") %>
+        <%= t('navbar.confectionery_factory')%>
+      <% end %>
+      <hr>
+      <center>
+      <%= link_to url_for(locale: :tm), :class => "navi" do %>
+        <%= image_tag "/assets/tm.png", :class => "flag" %>
+      <% end %>
+      <%= link_to url_for(locale: :en), :class => "navi" do %>
+        <%= image_tag "/assets/en.png", :class => "flag" %>
+      <% end %>
+      <%= link_to url_for(locale: :ru), :class => "navi" do %>
+        <%= image_tag "/assets/ru.png", :class => "flag" %>
+      <% end %>
+      <center>
+        <% if current_user == nil %>
+    <%= link_to new_user_session_path, class:'btn btn-success' do %>
+      Войти
+    <% end %>
+
+  <% end %>
+  <% if current_user != nil %>
+  <%= button_to destroy_user_session_path, method: :delete, class:'btn btn-danger' do %>
+    Выйти
+  <% end %>
+<% end %>  
+  </div>
+  <div class="overlay_1">
+
+  </div>
+</div>

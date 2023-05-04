@@ -8,6 +8,7 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= stylesheet_link_tag 'style', media: 'all' %>
 
 
 
@@ -17,8 +18,23 @@
   </head>
 
   <body>
+    <center>
+      <% if alert != nil%>
+
+        <p class="alert alert-danger"><%= alert %></p>
+
+
+      <%end%>
+      <% if notice != nil%>
+
+        <p class="alert alert-primary"><%= notice %></p>
+
+
+      <%end%>
+
+
+    </center>
     <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
   </body>
 </html>

@@ -23,8 +23,13 @@ class ApplicationController < ActionController::Base
     @main_carousel_active = Maincarousel.first
 
     @main_logo = Logo.where(main: true)
+    @logo = Logo.where(main: false)
+
     @main_logo.each do |logo|
-      @logo_main = logo 
+      @logo_main = logo
+    end
+    @logo.each do |logo|
+      @logotype = logo
     end
   end
 
