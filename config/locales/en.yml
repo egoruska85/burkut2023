@@ -36,3 +36,12 @@ en:
     factory: "factory"
     confectionery_factory: "confectionery_factory"
     ip: "individual enterprise"
+    home: "Home"
+    about: "About us"
+    projects: "Our projects"
+    contacts: "Contacts"
+  about:
+    first: "About us"
+    our_vision: "Our vision"
+    our_value: "Our value"
+    button_more: "More"

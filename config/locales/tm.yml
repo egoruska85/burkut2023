@@ -4,3 +4,12 @@ tm:
     factory: "zawod"
     confectionery_factory: "konditer zawody"
     ip: "aýry kärhana"
+    home: "Baş"
+    about: "Biz barada"
+    projects: "Taslamalarymyz"
+    contacts: "Aragatnaşyklar"
+  about:
+    first: "Biz barada"
+    our_vision: "Görüşimiz"
+    our_value: "Gymmatymyz"
+    button_more: "Has köp"

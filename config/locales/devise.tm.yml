@@ -48,7 +48,7 @@ ru:
       signed_in: "Giriş tamamlandy."
       signed_out: "Ulgam çykdy."
       already_signed_out: "Ulgam çykdy."
-      sign_in: "Login"
+      sign_in: "Giriş"
     unlocks:
       send_instructions: "В течение нескольких минут вы получите письмо с инструкциями по разблокировке вашей учётной записи."
       send_paranoid_instructions: "Если ваша учётная запись существует, то в течение нескольких минут вы получите письмо с инструкциями по её разблокировке."

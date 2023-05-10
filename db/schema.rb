@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_01_071259) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_10_205955) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -39,6 +39,24 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_01_071259) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "constructionabouts", force: :cascade do |t|
+    t.string "title_organization"
+    t.string "motto_ru"
+    t.string "motto_en"
+    t.string "motto_tm"
+    t.text "about_ru"
+    t.text "about_en"
+    t.text "about_tm"
+    t.text "vision_ru"
+    t.text "vision_en"
+    t.text "vision_tm"
+    t.text "values_ru"
+    t.text "values_en"
+    t.text "values_tm"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "logos", force: :cascade do |t|
     t.boolean "main"
     t.datetime "created_at", null: false
@@ -64,6 +82,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_01_071259) do
     t.string "body_ru"
     t.string "body_en"
     t.string "body_tm"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "title_ru"
+    t.string "title_en"
+    t.string "title_tm"
+    t.text "desc_ru"
+    t.text "desc_en"
+    t.text "desc_tm"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

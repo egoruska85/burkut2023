@@ -4,3 +4,12 @@ ru:
     factory: "производство"
     confectionery_factory: "кондитерскакя фабрика"
     ip: "индивидуальное предприятие"
+    home: "Главная"
+    about: "О нас"
+    projects: "Наши проекты"
+    contacts: "Контакты"
+  about:
+    first: "О нас"
+    our_vision: "Наше видение"
+    our_value: "Наши ценности"
+    button_more: "Подробнее"

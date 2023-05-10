@@ -79,3 +79,4 @@ gem 'rails-i18n'
 gem 'rails_admin', '3.0'
 gem 'rails_admin-i18n'
 gem "sassc-rails"
+gem 'simple_form'

@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :set_locale, :set_variable
+  before_action :set_locale, :set_variable, :set_about
 
   private
 
@@ -16,11 +16,11 @@ class ApplicationController < ActionController::Base
   end
   def set_variable
   #@organization = Organization.first
-    @a = -1
-    @time = Time.now
-    @main_carousel = Maincarousel.where(id: 2..100)
 
-    @main_carousel_active = Maincarousel.first
+    @time = Time.now
+    @main_carousel = Maincarousel.all
+
+    
 
     @main_logo = Logo.where(main: true)
     @logo = Logo.where(main: false)
@@ -30,6 +30,30 @@ class ApplicationController < ActionController::Base
     end
     @logo.each do |logo|
       @logotype = logo
+    end
+  end
+  def set_about
+    @construction_about = Constructionabout.first
+    if params[:locale] != true and params[:locale] != 'en' and params[:locale] != 'tm' and params[:locale] != 'ru'
+      @construction_motto = @construction_about.motto_ru
+      @construction_about_about = @construction_about.about_ru
+      @construction_about_vision = @construction_about.vision_ru
+      @construction_about_values = @construction_about.values_ru
+    elsif params[:locale] == 'ru'
+      @construction_motto = @construction_about.motto_ru
+      @construction_about_about = @construction_about.about_ru
+      @construction_about_vision = @construction_about.vision_ru
+      @construction_about_values = @construction_about.values_ru
+    elsif params[:locale] == 'en'
+      @construction_motto = @construction_about.motto_en
+      @construction_about_about = @construction_about.about_en
+      @construction_about_vision = @construction_about.vision_en
+      @construction_about_values = @construction_about.values_en
+    elsif params[:locale] == 'tm'
+      @construction_motto = @construction_about.motto_tm
+      @construction_about_about = @construction_about.about_tm
+      @construction_about_vision = @construction_about.vision_tm
+      @construction_about_values = @construction_about.values_tm
     end
   end
 
