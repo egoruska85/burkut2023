@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
     @time = Time.now
     @main_carousel = Maincarousel.all
 
-    
+
 
     @main_logo = Logo.where(main: true)
     @logo = Logo.where(main: false)
@@ -31,6 +31,7 @@ class ApplicationController < ActionController::Base
     @logo.each do |logo|
       @logotype = logo
     end
+    
   end
   def set_about
     @construction_about = Constructionabout.first

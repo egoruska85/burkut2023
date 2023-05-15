@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   root "main#index"
   get '/constructions', to: 'constructions#index'
 
-  resources :projects, path: '/constructions/projects'
+  resources :projects, path: '/constructions/projects', only: [ :index, :show ]
+
 
   resources :factories
   # Defines the root path route ("/")

@@ -1,0 +1,28 @@
+<% @projects.each do |project| %>
+  <% main_picture = project.pictures.first %>
+  <div class="col-md-4 ftco-animate">
+    <div class="work img d-flex align-items-end" style="background-image: url(<%= rails_blob_url(main_picture)%>);">
+      <a href="<%= rails_blob_url(main_picture)%>" class="icon image-popup d-flex justify-content-center align-items-center">
+        <span class="icon-expand"></span>
+      </a>
+      <div class="desc w-100 px-4">
+        <div class="text w-100 mb-3">
+          <span>
+            <%= project.title_ru.upcase if params[:locale] != true and params[:locale] != 'en' and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+            <%= project.title_ru.upcase if params[:locale] == 'ru' %>
+            <%= project.title_en.upcase if params[:locale] == 'en' %>
+            <%= project.title_tm.upcase if params[:locale] == 'tm' %>
+          </span>
+          <h2><a href="/work-single.html">
+            <%= link_to project_path(project) do %>
+              <%= project.desc_ru.length <= 30 ? project.desc_ru : project.desc_ru[0..30]  if params[:locale] != true and params[:locale] != 'en' and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+              <%= project.desc_ru.length <= 30 ? project.desc_ru : project.desc_ru[0..30]  if params[:locale] == 'ru' %>
+              <%= project.desc_en.length <= 30 ? project.desc_en : project.desc_en[0..30]  if params[:locale] == 'en' %>
+              <%= project.desc_tm.length <= 30 ? project.desc_tm : project.desc_tm[0..30]  if params[:locale] == 'tm' %>
+            <% end %>
+          </a></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
