@@ -1,33 +1,29 @@
 <div class="hero-wrap">
-<div class="home-slider owl-carousel">
-  <% @main_carousel.each do |carousel| %>
-  <div class="slider-item" style="background-image:url(<%= rails_blob_url(carousel.image)%>);">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row no-gutters slider-text align-items-center justify-content-center">
-        <div class="col-md-12 ftco-animate">
-          <div class="text w-100 text-center">
-            <h2>
-              <%= carousel.body_ru if params[:locale] != true and params[:locale] != 'en' and params[:locale] != 'tm' and params[:locale] != 'ru'%>
-              <%= carousel.body_ru if params[:locale] == 'ru' %>
-              <%= carousel.body_en if params[:locale] == 'en' %>
-              <%= carousel.body_tm if params[:locale] == 'tm' %>
-            </h2>
-            <h1 class="mb-3" style="font-family: bankgothic; font-weight: 900; font-size: 35px; width: 300px;">
-              <%= carousel.title_ru if params[:locale] != true and params[:locale] != 'en' and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-              <%= carousel.title_ru if params[:locale] == 'ru' %>
-              <%= carousel.title_en if params[:locale] == 'en' %>
-              <%= carousel.title_tm if params[:locale] == 'tm' %>
-            </h1>
+  <div class="home-slider owl-carousel">
+    <% @main_carousel.each do |carousel| %>
+      <div class="slider-item" style="background-image:url(<%= rails_blob_url(carousel.image)%>);">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center">
+            <div class="col-md-12 ftco-animate">
+              <div class="text w-100 text-center">
+                <h2>
+                  <%= carousel.body_ru.upcase if params[:locale] != true and params[:locale] != 'en' and params[:locale] != 'tm' and params[:locale] != 'ru'%>
+                  <%= carousel.body_ru.upcase if params[:locale] == 'ru' %>
+                  <%= carousel.body_en.upcase if params[:locale] == 'en' %>
+                  <%= carousel.body_tm.upcase if params[:locale] == 'tm' %>
+                </h2>
+                <h1 class="mb-3" style="font-family: bankgothic; font-weight: 900; font-size: 30px; width: 300px;">
+                  <%= carousel.title_ru.upcase if params[:locale] != true and params[:locale] != 'en' and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+                  <%= carousel.title_ru.upcase if params[:locale] == 'ru' %>
+                  <%= carousel.title_en.upcase if params[:locale] == 'en' %>
+                  <%= carousel.title_tm.upcase if params[:locale] == 'tm' %>
+                </h1>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    <% end %>
   </div>
-
-
-
-
-<% end %>
-</div>
 </div>
