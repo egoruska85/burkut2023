@@ -1,0 +1,2 @@
+class Peculiarity < ApplicationRecord
+end
