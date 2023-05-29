@@ -1,0 +1,2 @@
+class Conatct < ApplicationRecord
+end

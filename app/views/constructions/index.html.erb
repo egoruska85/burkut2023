@@ -24,6 +24,7 @@
   <body>
 <body>
   <%= render 'constructions/navbar/navbar' %>
+  <%= render 'lang/lang' %>
   <%= render 'constructions/carousel' %>
 <br>
 <section class="ftco-section ftco-no-pt ftco-no-pb">
@@ -46,7 +47,7 @@
             <span class="flaticon-skyline"></span>
           </div>
           <div class="media-body p-2 mt-3">
-            <h3 class="heading"><%= @service_2_body.upcase %></h3>
+            <h3 class="heading"><%= @service_2_title.upcase %></h3>
             <p><%= @service_2_body.upcase %></p>
           </div>
         </div>
@@ -167,11 +168,42 @@
 </section>
 
 <%= render '/constructions/aboutmodal' %>
+<section class="ftco-section testimony-section bg-primary">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
 
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<!-->SCRIPT SECTIONS<-->
+        <h2 class="mb-4"><%= t('main.our_certificates')%></h2>
+      </div>
+    </div>
+    <div class="row ftco-animate">
+      <div class="col-md-12">
+        <div class="carousel-testimony owl-carousel ftco-owl">
+          <% @constructioncertificate.each do |sertificate| %>
+            <div class="item">
+              <div class="testimony-wrap py-4">
+                <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                <div class="text">
+                  <p class="mb-4"><%= sertificate.title_ru %></p>
+                  <div class="d-flex align-items-center">
+                    <div class="user-img" style="background-image: url(<%= rails_blob_url(sertificate.picture) %>)"></div>
+                    <div class="pl-3">
+                      <p class="name"><%= sertificate.title_ru %></p>
+                      <span class="position"><%= link_to 'Посмотреть', sertificate.picture, class:'btn btn-primary', target:"_blank" %></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%= render 'layouts/footer' %>
+
+<!--SCRIPT SECTIONS-->
   <script src="/js/jquery.min.js"></script>
   <script src="/js/jquery-migrate-3.0.1.min.js"></script>
   <script src="/js/popper.min.js"></script>

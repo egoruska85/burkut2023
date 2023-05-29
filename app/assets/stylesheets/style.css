@@ -29,3 +29,14 @@
   background-color: #fff;
   padding: 30px;
 }
+.flag {
+  transition: 1s;
+  width: 25px;
+  -webkit-transform-origin: center;
+  transform: scale(0.9);
+  z-index: 1;
+}
+.flag:hover {
+  transform: scale(1.8);
+  z-index: 999999999999;
+}

@@ -8,9 +8,15 @@ ru:
     about: "О нас"
     projects: "Наши проекты"
     contacts: "Контакты"
+  footer:
+    rights: "Все права защищены"
+    templates_made: "Этот шаблон сделан с"
+    by: "помощью"  
   about:
     first: "О нас"
     our_vision: "Наше видение"
     our_value: "Наши ценности"
     button_more: "Подробнее"
     our_peculiarity: "Наши особенности"
+  main:
+    our_certificates: "Наши сертификаты и дипломы"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_18_111344) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_29_071845) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -39,6 +39,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_18_111344) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "conatcts", force: :cascade do |t|
+    t.string "email"
+    t.string "address_ru"
+    t.string "address_en"
+    t.string "address_tm"
+    t.integer "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "constructionabouts", force: :cascade do |t|
     t.string "title_organization"
     t.string "motto_ru"
@@ -53,6 +63,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_18_111344) do
     t.text "values_ru"
     t.text "values_en"
     t.text "values_tm"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "constructioncertificates", force: :cascade do |t|
+    t.string "title_ru"
+    t.string "title_en"
+    t.string "title_tm"
+    t.text "body_ru"
+    t.text "body_en"
+    t.text "body_tm"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

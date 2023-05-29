@@ -1,6 +1,8 @@
 class ConstructionsController < ApplicationController
   def index
 
+    @constructioncertificate = Constructioncertificate.all
+
     @peculiarity1 = Peculiarity.first
     if params[:locale] != true and params[:locale] != 'en' and params[:locale] != 'tm' and params[:locale] != 'ru'
       @peculiarity1_title = @peculiarity1.title_ru.upcase

@@ -1,5 +1,6 @@
 class MainController < ApplicationController
   def index
-    @mainabout = Mainabout.first  
+    @mainabout = Mainabout.first
+    
   end
 end
