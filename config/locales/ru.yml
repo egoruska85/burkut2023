@@ -8,10 +8,11 @@ ru:
     about: "О нас"
     projects: "Наши проекты"
     contacts: "Контакты"
+    contact_us: "Наши Контакты"
   footer:
     rights: "Все права защищены"
     templates_made: "Этот шаблон сделан с"
-    by: "помощью"  
+    by: "помощью"
   about:
     first: "О нас"
     our_vision: "Наше видение"

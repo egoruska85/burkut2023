@@ -11,7 +11,7 @@
       <div class="social-media">
         <p class="mb-0 d-flex">
 
-          
+
         </p>
       </div>
     </div>
@@ -51,8 +51,11 @@
           <!--<a href="project.html" class="nav-link"></a>-->
         </li>
 
-        <li class="nav-item"><a href="contact.html" class="nav-link"><%= t('navbar.contacts') %></a></li>
         <li class="nav-item">
+          <%= link_to contacts_path, class:'nav-link' do %>
+            <%= t('navbar.contacts') %>
+          <% end %>
+        </li>
           <a href="#" class="nav-link" data-bs-target="#lang" data-bs-toggle="modal">
             <span class="fa fa-dribbble" style="font-size: 20px;">
               <i class="sr-only">Dribbble</i>

@@ -1,2 +1,0 @@
-class Conatct < ApplicationRecord
-end

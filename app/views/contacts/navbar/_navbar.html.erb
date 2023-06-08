@@ -1,0 +1,66 @@
+<div class="container pt-5">
+  <div class="row justify-content-between">
+    <div class="col">
+
+      <%= link_to constructions_path, class:"navbar-brand" do %>
+        <b style="font-family: bankgothic; font-weight: 900; font-size: 35px; width: 300px;">BURKUT</b>
+        <span style="font-size: 20px;"> <%= t('navbar.construction') %></span>
+      <% end %>
+    </div>
+    <div class="col d-flex justify-content-end">
+      <div class="social-media">
+        <p class="mb-0 d-flex">
+
+
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light sticky-top" id="ftco-navbar">
+  <div class="container">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="fa fa-bars"></span> Menu
+    </button>
+    <form action="#" class="searchform order-lg-last">
+      <div class="form-group d-flex">
+        <input type="text" class="form-control pl-3" placeholder="Search">
+        <button type="submit" placeholder="" class="form-control search"><span class="fa fa-search"></span></button>
+      </div>
+    </form>
+    <div class="collapse navbar-collapse" id="ftco-nav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to constructions_path, class:"nav-link" do %>
+            <%= t('navbar.home') %>
+          <% end %>
+          <!--<a href="index.html" class="nav-link">Home</a>-->
+        </li>
+        <li class="nav-item">
+          <!--<a href="#section_about" class="nav-link"><%= t('navbar.about') %></a>-->
+
+            <a class="nav-link" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><%= t('navbar.about') %></a>
+
+        </li>
+
+        <li class="nav-item">
+          <%= link_to projects_path, class:"nav-link" do %>
+            <%= t('navbar.projects') %>
+          <% end %>
+          <!--<a href="project.html" class="nav-link"></a>-->
+        </li>
+
+        <li class="nav-item active">
+          <a href="contact.html" class="nav-link"><%= t('navbar.contacts') %></a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" data-bs-target="#lang" data-bs-toggle="modal">
+            <span class="fa fa-dribbble" style="font-size: 20px;">
+              <i class="sr-only">Dribbble</i>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

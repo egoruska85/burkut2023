@@ -45,7 +45,7 @@ gem "bootsnap", require: false
 gem "bootstrap"
 
 # Use Sass to process CSS
-gem "sassc-rails"
+# gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -80,3 +80,4 @@ gem 'rails_admin', '3.0'
 gem 'rails_admin-i18n'
 gem "sassc-rails"
 gem 'simple_form'
+gem 'mail_form'

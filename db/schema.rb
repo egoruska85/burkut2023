@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_29_071845) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_08_111612) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -39,16 +39,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_29_071845) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "conatcts", force: :cascade do |t|
-    t.string "email"
-    t.string "address_ru"
-    t.string "address_en"
-    t.string "address_tm"
-    t.integer "phone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "constructionabouts", force: :cascade do |t|
     t.string "title_organization"
     t.string "motto_ru"
@@ -74,6 +64,21 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_29_071845) do
     t.text "body_ru"
     t.text "body_en"
     t.text "body_tm"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contactdetails", force: :cascade do |t|
+    t.string "email1"
+    t.string "email2"
+    t.string "email3"
+    t.string "address_ru"
+    t.string "address_en"
+    t.string "address_tm"
+    t.integer "phone1"
+    t.integer "phone2"
+    t.integer "phone3"
+    t.integer "phone4"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -40,6 +40,11 @@ en:
     about: "About us"
     projects: "Our projects"
     contacts: "Contacts"
+    contact_us: "Contacts Us"
+  footer:
+    rights: "All rights reserved"
+    templates_made: "This template is made with"
+    by: "by"
   about:
     first: "About us"
     our_vision: "Our vision"
@@ -47,4 +52,4 @@ en:
     button_more: "More"
     our_peculiarity: "our peculiarity"
   main:
-    our_certificates: "Our certificates and diplomas"   
+    our_certificates: "Our certificates and diplomas"

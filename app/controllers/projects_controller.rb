@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   def index
-    @header_picture = Pictureheaderonproject.last
+    #@header_picture = Pictureheaderonproject.last
     @projects = Project.limit(9)
 
   end

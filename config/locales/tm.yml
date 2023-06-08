@@ -8,6 +8,11 @@ tm:
     about: "Biz barada"
     projects: "Taslamalarymyz"
     contacts: "Aragatnaşyklar"
+    contact_us: "Aragatnaşyklarymyz"
+  footer:
+    rights: "All rights reserved"
+    templates_made: "Bu şablon bilen"
+    by: "ýasaldy"
   about:
     first: "Biz barada"
     our_vision: "Görüşimiz"
