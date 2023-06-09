@@ -81,3 +81,4 @@ gem 'rails_admin-i18n'
 gem "sassc-rails"
 gem 'simple_form'
 gem 'mail_form'
+gem "recaptcha", require: "recaptcha/rails"

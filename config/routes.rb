@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     get '/constructions', to: 'constructions#index'
 
     resources :projects, path: '/constructions/projects', only: [ :index, :show ]
-    resources :contacts, path: '/constructions/contacts', only: [ :index ]
+    resources :contacts, path: '/constructions/contacts'
 
     resources :factories
 

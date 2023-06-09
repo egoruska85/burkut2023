@@ -47,49 +47,81 @@
           <div class="row no-gutters mb-5">
             <div class="col-md-7">
               <div class="contact-wrap w-100 p-md-5 p-4">
-                <h3 class="mb-4">Contact Us</h3>
-                <div id="form-message-warning" class="mb-4"></div>
-                <div id="form-message-success" class="mb-4">
-                  Your message was sent, thank you!
+
+                  <h3 class="mb-4"><%= t('contact.write') %></h3>
+                  <div id="form-message-warning" class="mb-4"></div>
+                  <!--<div id="form-message-success" class="mb-4">-->
+                    <!--Your message was sent, thank you!-->
+
+
+                    <% flash.each do |type, msg| %>
+                      <div class="alert alert-danger">
+                        <center><%= msg %></center>
+                      </div>
+                    <% end %>
+
+
+                <%= form_for @contact do |f| %>
+                  <!--</div>-->
+                  <!--<form method="POST" id="contactForm" name="contactForm" class="contactForm">-->
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <!--<label class="label" for="name">Full Name</label>
+                          <input type="text" class="form-control" name="name" id="name" placeholder="Name">-->
+                          <%= f.label t('contact.name') %>
+                          <%= f.text_field :name, class:'form-control', placeholder: t('contact.name')%>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <!--<label class="label" for="email">Email Address</label>
+                          <input type="email" class="form-control" name="email" id="email" placeholder="Email">-->
+                          <%= f.label t('contact.mail') %>
+                          <%= f.text_field :email, class:'form-control', placeholder: t('contact.mail')%>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <!--<label class="label" for="subject">Subject</label>
+                          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">-->
+                          <%= f.label t('contact.phone') %>
+                          <%= f.text_field :phone, class:'form-control', placeholder: t('contact.sales_phone')%>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <!--<label class="label" for="#">Message</label>
+                          <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>-->
+                          <%= f.label t('contact.message') %>
+                          <%= f.text_area :message, class:'form-control', placeholder: t('contact.message'), rows:"6" %>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <!--<label class="label" for="#">Message</label>
+                          <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>-->
+                          <%= f.file_field :file, class:'form-control', type:'file', id:'formFileMultiple', multiple: true %>
+                        </div>
+                      </div>
+
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <%= f.submit 'Отправить', class:'btn btn-primary'%>
+                          <!--<input type="submit" value="Send Message" class="btn btn-primary">-->
+                          <div class="submitting"></div>
+                        </div>
+                      </div>
+                    </div>
+                  <!--</form>-->
                 </div>
-                <form method="POST" id="contactForm" name="contactForm" class="contactForm">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label class="label" for="name">Full Name</label>
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Name">
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label class="label" for="email">Email Address</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Email">
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label class="label" for="subject">Subject</label>
-                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label class="label" for="#">Message</label>
-                        <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <input type="submit" value="Send Message" class="btn btn-primary">
-                        <div class="submitting"></div>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
+              <% end %>
             </div>
             <div class="col-md-5 d-flex align-items-stretch">
               <div id="map">
+                <script src="https://api-maps.yandex.ru/2.1/?apikey=<%= @key %>&lang=ru_RU" type="text/javascript"></script>
+
+                <script async src="/js/ymaps.js"></script>
               </div>
             </div>
           </div>

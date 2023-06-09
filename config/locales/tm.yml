@@ -21,3 +21,15 @@ tm:
     our_peculiarity: "aýratynlygymyz"
   main:
     our_certificates: "Şahadatnamalarymyz we diplomlarymyz"
+  contact:
+    contacts: "Habarlaşmak üçin"
+    mail: "El-poçta"
+    phone: "Biziň telefon belgilerimiz"
+    address: "Biziň salgymyz"
+    text: "Tekst"
+    file: "Faýllary dakyň"
+    write: "Biz bilen habarlaşyň"
+    name: "Ady"
+    send: "Iber"
+    message: "Habar"
+    sales_phone: "Telefon belgiňiz"  

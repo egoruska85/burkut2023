@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  add_flash_types :info, :error, :warning
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_locale, :set_variable, :set_about
 
@@ -31,7 +32,7 @@ class ApplicationController < ActionController::Base
     @logo.each do |logo|
       @logotype = logo
     end
-
+    @contact = Contact.new
   end
   def set_about
     @construction_about = Constructionabout.first

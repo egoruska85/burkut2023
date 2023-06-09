@@ -15,24 +15,25 @@
         </div>
       </div>
       <div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
-        <h2 class="footer-heading">Request A Quote</h2>
-        <form action="#" class="contact-form">
+        <h2 class="footer-heading"><%= t('contact.write') %></h2>
+        <%= form_for @contact do |f| %>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Your Name">
+            <%= f.text_field :name, class:'form-control', placeholder: t('contact.name')%>
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Your Email">
+            <%= f.text_field :email, class:'form-control', placeholder: t('contact.mail')%>
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Subject">
+            <%= f.text_field :phone, class:'form-control', placeholder: t('contact.sales_phone')%>
           </div>
           <div class="form-group">
-            <textarea name="" id="" cols="30" rows="3" class="form-control" placeholder="Message"></textarea>
+            <%= f.text_area :message, class:'form-control', placeholder: t('contact.message'), rows:"3", cols:"30" %>
           </div>
           <div class="form-group">
-            <button type="submit" class="form-control submit px-3">Send</button>
+            
+            <%= f.submit 'Отправить', class:'form-control submit px-3' %>
           </div>
-        </form>
+        <% end %>
       </div>
     </div>
   </div>

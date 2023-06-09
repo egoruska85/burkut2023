@@ -23,12 +23,7 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="fa fa-bars"></span> Menu
     </button>
-    <form action="#" class="searchform order-lg-last">
-      <div class="form-group d-flex">
-        <input type="text" class="form-control pl-3" placeholder="Search">
-        <button type="submit" placeholder="" class="form-control search"><span class="fa fa-search"></span></button>
-      </div>
-    </form>
+
     <div class="collapse navbar-collapse" id="ftco-nav">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
@@ -51,11 +46,8 @@
           <!--<a href="project.html" class="nav-link"></a>-->
         </li>
 
+        <li class="nav-item"><a href="contact.html" class="nav-link"><%= t('navbar.contacts') %></a></li>
         <li class="nav-item">
-          <%= link_to contacts_path, class:'nav-link' do %>
-            <%= t('navbar.contacts') %>
-          <% end %>
-        </li>
           <a href="#" class="nav-link" data-bs-target="#lang" data-bs-toggle="modal">
             <span class="fa fa-dribbble" style="font-size: 20px;">
               <i class="sr-only">Dribbble</i>
