@@ -34,13 +34,14 @@ en:
   navbar:
     construction: "construction"
     factory: "factory"
-    confectionery_factory: "confectionery_factory"
+    confectionery_factory: "confectionery factory"
     ip: "individual enterprise"
     home: "Home"
     about: "About us"
     projects: "Our projects"
     contacts: "Contacts"
     contact_us: "Contacts Us"
+    products: "Products"
   footer:
     rights: "All rights reserved"
     templates_made: "This template is made with"

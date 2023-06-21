@@ -11,3 +11,30 @@
        url("/fonts/bankgothicmdbt_medium.otf") format("woff"),
        /* Если браузер не поддерживает woff2, загрузит woff */
 }
+@font-face {
+  font-family: "Bold Script";
+
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Bold Script"),
+       /* Если не получилось, загрузит woff2 */
+       url("/fonts/7129-fontps.ttf") format("woff"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+}
+@font-face {
+  font-family: "BubbleGum";
+
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("BubbleGum"),
+       /* Если не получилось, загрузит woff2 */
+       url("/fonts/10-font.ttf") format("woff"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+}
+@font-face {
+  font-family: "ArbatC";
+
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("ArbatC"),
+       /* Если не получилось, загрузит woff2 */
+       url("/fonts/5-font.otf") format("woff"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+}

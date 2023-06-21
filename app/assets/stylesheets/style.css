@@ -40,3 +40,20 @@
   transform: scale(1.8);
   z-index: 999999999999;
 }
+.link-font {
+  font-family: ArbatC;
+}
+.parallax {
+  /* The image used */
+  background-image: url("/images/5555.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}

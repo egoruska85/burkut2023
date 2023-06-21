@@ -9,6 +9,7 @@ tm:
     projects: "Taslamalarymyz"
     contacts: "Aragatnaşyklar"
     contact_us: "Aragatnaşyklarymyz"
+    products: "Önümler"
   footer:
     rights: "All rights reserved"
     templates_made: "Bu şablon bilen"
@@ -32,4 +33,4 @@ tm:
     name: "Ady"
     send: "Iber"
     message: "Habar"
-    sales_phone: "Telefon belgiňiz"  
+    sales_phone: "Telefon belgiňiz"

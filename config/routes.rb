@@ -10,7 +10,11 @@ Rails.application.routes.draw do
     resources :projects, path: '/constructions/projects', only: [ :index, :show ]
     resources :contacts, path: '/constructions/contacts'
 
-    resources :factories
+  
+
+    get "/factories", to: 'factories#index'
+
+    resources :products, path: '/factories/products', only: [ :index, :show ]
 
     resources :admin, only: :index
 

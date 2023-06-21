@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_08_111612) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_20_121429) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -83,6 +83,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_08_111612) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "dependproducts", force: :cascade do |t|
+    t.string "title_ru"
+    t.string "title_en"
+    t.string "title_tm"
+    t.integer "product_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_dependproducts_on_product_id"
+  end
+
   create_table "logos", force: :cascade do |t|
     t.boolean "main"
     t.datetime "created_at", null: false
@@ -129,6 +139,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_08_111612) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "products", force: :cascade do |t|
+    t.string "title_ru"
+    t.string "title_en"
+    t.string "title_tm"
+    t.text "desc_ru"
+    t.text "desc_en"
+    t.text "desc_tm"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string "title_ru"
     t.string "title_en"
@@ -167,4 +188,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_08_111612) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "dependproducts", "products"
 end
