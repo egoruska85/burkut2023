@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_20_121429) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_23_045532) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -93,6 +93,41 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_20_121429) do
     t.index ["product_id"], name: "index_dependproducts_on_product_id"
   end
 
+  create_table "factoryabouts", force: :cascade do |t|
+    t.string "name"
+    t.string "service_ru"
+    t.string "service_en"
+    t.string "service_tm"
+    t.text "body_ru"
+    t.text "body_en"
+    t.text "body_tm"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "factorycarouusels", force: :cascade do |t|
+    t.string "title_ru"
+    t.string "title_en"
+    t.string "title_tm"
+    t.string "desc_ru"
+    t.string "desc_en"
+    t.string "desc_tm"
+    t.string "link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "factorycertificates", force: :cascade do |t|
+    t.string "title_ru"
+    t.string "title_en"
+    t.string "title_tm"
+    t.text "desc_ru"
+    t.text "desc_en"
+    t.text "desc_tm"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "logos", force: :cascade do |t|
     t.boolean "main"
     t.datetime "created_at", null: false
@@ -118,6 +153,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_20_121429) do
     t.string "body_ru"
     t.string "body_en"
     t.string "body_tm"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "mottos", force: :cascade do |t|
+    t.string "title_ru"
+    t.string "title_en"
+    t.string "title_tm"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

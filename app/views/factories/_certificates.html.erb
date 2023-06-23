@@ -1,0 +1,28 @@
+
+
+<div class="row">
+
+  <% @factorycertificates.each do |certificate| %>
+    <div class="col-md-3 col-6 col-lg-2 col-xs-6">
+      <div class="card" style="width: 11rem;">
+        <%= image_tag(certificate.picture, class:"card-img-top", alt:"...") %>
+
+        <div class="card-body text-white" style="background: RGB(47, 79, 79)">
+          <center>
+            <%= link_to certificate.picture, class:'nav-link', target:"_blank" do %>
+              <h5 class="card-title">
+                <%= certificate.title_ru if params[:locale] != true and params[:locale] != 'en' and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+                <%= certificate.title_ru if params[:locale] == 'ru' %>
+                <%= certificate.title_en if params[:locale] == 'en' %>
+                <%= certificate.title_tm if params[:locale] == 'tm' %>
+                </h5>
+              <% end %>
+            </center>
+
+
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+</div>
