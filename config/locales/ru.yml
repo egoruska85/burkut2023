@@ -34,6 +34,7 @@ ru:
     send: "Отправить"
     message: "Сообщение"
     sales_phone: "Ваш номер телефона"
+    fax: "Факс"
   factory:
     sertificates: "НАШИ СЕРТИФИКАТЫ И ДИПЛОМЫ"
     our_production: "НАШ АССОРТИМЕНТ"

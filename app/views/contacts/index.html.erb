@@ -132,7 +132,11 @@
                   <span class="fa fa-map-marker"></span>
                 </div>
                 <div class="text">
-                  <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+                  <p><span><%= t('contact.address')%>
+                          <%= @contact_detail.address_ru if params[:locale] != true and params[:locale] != 'en' and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+                          <%= @contact_detail.address_ru if params[:locale] == 'ru' %>
+                          <%= @contact_detail.address_en if params[:locale] == 'en' %>
+                          <%= @contact_detail.address_tm if params[:locale] == 'tm' %></p>
                 </div>
               </div>
             </div>
@@ -142,7 +146,12 @@
                   <span class="fa fa-phone"></span>
                 </div>
                 <div class="text">
-                  <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                  <p><span><%= t('contact.phone')%></span>
+                    <%= phone_to '+' + "#{@contact_detail.phone1}" %>;
+                    <%= phone_to '+' + "#{@contact_detail.phone2}" %>;
+                    <%= phone_to '+' + "#{@contact_detail.phone2}" %>;<br>
+                    <%= phone_to '+' + "#{@contact_detail.phone2}" %> - <%= t('contact.fax')%>
+                  </p>
                 </div>
               </div>
             </div>
@@ -152,7 +161,8 @@
                   <span class="fa fa-paper-plane"></span>
                 </div>
                 <div class="text">
-                  <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                  <p><span>Emails: </span><%= mail_to @contact_detail.email1 %>; <%= mail_to @contact_detail.email2 %></p>
+
                 </div>
               </div>
             </div>
@@ -162,7 +172,7 @@
                   <span class="fa fa-globe"></span>
                 </div>
                 <div class="text">
-                  <p><span>Website</span> <a href="#">yoursite.com</a></p>
+                  <p><span>Website:</span> <a href="#">BURKUT.BIZ</a></p>
                 </div>
               </div>
             </div>

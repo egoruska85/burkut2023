@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   add_flash_types :info, :error, :warning
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :set_locale, :set_variable, :set_about
+  before_action :set_locale, :set_variable, :set_about, :contact_details
 
   private
 
@@ -33,6 +33,7 @@ class ApplicationController < ActionController::Base
       @logotype = logo
     end
     @contact = Contact.new
+    @nophoto = Nophoto.last
   end
   def set_about
     @construction_about = Constructionabout.first
@@ -58,7 +59,9 @@ class ApplicationController < ActionController::Base
       @construction_about_values = @construction_about.values_tm
     end
   end
-
+  def contact_details
+    @contact_detail = Contactdetail.last
+  end
 
   protected
   def configure_permitted_parameters
