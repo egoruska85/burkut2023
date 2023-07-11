@@ -1,0 +1,49 @@
+<div class="" style="background-color: RGB( 172,23,43 );">
+  <br>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 col-lg-5">
+          <h6 class="text-white">BURKUT&copy; <%= Time.now.year %> <%= t('footer.rights') %> | <%= t('footer.templates_made') %> <i class="ion-ios-heart" aria-hidden="true"></i> <%= t('footer.by') %> <a href="https://getbootstrap.com" target="_blank" style="text-decoration: none;"><i>Bootstrap</i></a></h6>
+        </div>
+        <div class="col-md-6 col-sm-12 col-lg-4">
+          <h6 class="text-white" ><%= t('contact.phone')%>          <%= phone_to '+' + "#{@contact_detail.phone1}", style:"text-decoration: none;" %>;
+                    <%= phone_to '+' + "#{@contact_detail.phone2}", style:"text-decoration: none;" %>;
+                    <%= phone_to '+' + "#{@contact_detail.phone2}", style:"text-decoration: none;" %>;<br>
+                    <%= phone_to '+' + "#{@contact_detail.phone2}", style:"text-decoration: none;" %> - <%= t('contact.fax')%></h6>
+
+        </div>
+        <div class="col-md-12 col-sm-12 col-lg-3">
+          <center><h6 class="footer-heading text-white"><%= t('contact.write') %></h6></center>
+          <center>
+            <div class="" style="max-width: 350px;">
+              <%= form_for @contact do |f| %>
+                <div class="form-group">
+                  <%= f.text_field :name, class:'form-control', placeholder: t('contact.name')%>
+                </div>
+                <br>
+                <div class="form-group">
+                  <%= f.text_field :email, class:'form-control', placeholder: t('contact.mail')%>
+                </div>
+                <br>
+                <div class="form-group">
+                  <%= f.text_field :phone, class:'form-control', placeholder: t('contact.sales_phone'), value:"+" %>
+                </div>
+                <br>
+                <div class="form-group">
+                  <%= f.text_area :message, class:'form-control', placeholder: t('contact.message'), rows:"3", cols:"30" %>
+                </div>
+                <br>
+                <div class="form-group">
+
+                  <%= f.submit 'Отправить', class:'form-control submit px-3 text-white', style:'background: #AC172B;' %>
+                </div>
+              <% end %>
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
+
+
+
+</div>

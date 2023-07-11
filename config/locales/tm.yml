@@ -34,7 +34,9 @@ tm:
     send: "Iber"
     message: "Habar"
     sales_phone: "Telefon belgiňiz"
-    fax: "Faks" 
+    fax: "Faks"
   factory:
     sertificates: "BIZIERT KERTIFIKATLARYMYZ WE DIPLOMLARymyz"
     our_production: "BIZI R DÖWRÜMIZ"
+  product:
+    tastes: "Tagamlar"  

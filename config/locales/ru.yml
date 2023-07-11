@@ -38,3 +38,5 @@ ru:
   factory:
     sertificates: "НАШИ СЕРТИФИКАТЫ И ДИПЛОМЫ"
     our_production: "НАШ АССОРТИМЕНТ"
+  product:
+    tastes: "Вкусы"  

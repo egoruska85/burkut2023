@@ -10,17 +10,47 @@
 <body>
   <%= render '/products/navbar/navbar' %>
   <%= render 'lang/lang' %>
-  <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+  <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded sticky-top">
+    <br><br>
     <center>
-      <h1 style="font-family: tilda-script-regular; color: #AC172B; font-size: 100px;">
+      <h1 style="font-family: tilda-script-regular; color: #AC172B; font-size: 80px;">
         <%= @product.title_ru %>
       </h1>
     </center>
   </div>
 
 <h1></h1>
-  <% @product.dependproducts.each do |depend| %>
-    <%= depend.title_ru %>
-  <% end %>
-  <%= render 'factories/footer' %>
+<div class="container-fluid">
+  <div class="row position1" style="background-image: url(<%= rails_blob_url(@product.picture)%>); background-repeat: no-repeat; background-size: 50%;">
+    <div class="col-sm-12 col-md-12 col-lg-6">
+      <center><%= image_tag(@product.picture, style:'width: 50%;', class:'fixed1') %></center>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded border border-danger" style="background: rgba(240, 255, 255, 0.5); min-height: 1090px;">
+      <center><h1 style="font-family: tilda-script-regular; color: #AC172B; font-size: 50px;"><%= t('product.tastes').upcase %></h1></center>
+      <div class="row">
+        <% @product.dependproducts.each do |depend| %>
+        <div class="col-6 col-md-4 col-lg-3 border border-danger rounded" style="background: rgba(240, 255, 255);">
+          <center>
+            <%= image_tag(depend.picture, style:'width: 100%;') %>
+
+              <h3 style="color: #AC172B; font-family: tilda-script-regular;">
+                <%= depend.title_ru if params[:locale] != true and params[:locale] != 'en' and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+                <%= depend.title_ru if params[:locale] == 'ru' %>
+                <%= depend.title_en if params[:locale] == 'en' %>
+                <%= depend.title_tm if params[:locale] == 'tm' %>
+              </h3>
+
+
+          </center>
+        </div>
+<% end %>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+  <%= render 'factories/footer2' %>
 </body>

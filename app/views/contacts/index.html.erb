@@ -85,8 +85,8 @@
                         <div class="form-group">
                           <!--<label class="label" for="subject">Subject</label>
                           <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">-->
-                          <%= f.label t('contact.phone') %>
-                          <%= f.text_field :phone, class:'form-control', placeholder: t('contact.sales_phone')%>
+                          <%= f.label t('contact.sales_phone') %>
+                          <%= f.text_field :phone, class:'form-control', placeholder: t('contact.sales_phone'), value:'+'%>
                         </div>
                       </div>
                       <div class="col-md-12">

@@ -85,3 +85,24 @@
   background-size: cover;
 
 }
+.fixed1 { display: inline; }
+/* Smartphone Portrait and Landscape */
+@media only screen
+
+and (min-device-width : 992px)
+and (max-device-width : 1920px){ .fixed1 { display: none; }}
+
+
+
+.position1 {
+
+}
+
+
+@media only screen and (max-width: 991px) {
+
+  .position1 {
+    background-position: center;
+
+  }
+}
