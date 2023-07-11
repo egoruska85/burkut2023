@@ -1,7 +1,11 @@
 
 <div class="container">
-  <%= link_to factories_path, class:"navbar-brand" do %>
+  <%= link_to root_path, class:"navbar-brand" do %>
     <b style="font-family: Bold Script; font-weight: 900; font-size: 35px; width: 300px; color: #AC172B;">BURKUT</b>
+
+  <% end %>
+  <%= link_to factories_path, class:"navbar-brand" do %>
+
     <span style="font-family: BubbleGum; font-size: 15px;"> <%= t('navbar.confectionery_factory').upcase %></span>
   <% end %>
 
@@ -21,13 +25,13 @@
           <%= link_to t('navbar.products'), products_path, class:"nav-link text-white link-font" %>
 
         </li>
-        <li class="nav-item">
+        <!--<li class="nav-item">
           <a class="nav-link text-white link-font" href="#">Link</a>
         </li>
 
         <li class="nav-item">
           <a class="nav-link text-white link-font">Disabled</a>
-        </li>
+        </li>-->
         <li class="nav-item">
           <a href="#" class="nav-link link-font" data-bs-target="#lang" data-bs-toggle="modal">
             <span class="fa fa-dribbble text-white" style="font-size: 20px;">

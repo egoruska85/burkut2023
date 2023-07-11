@@ -2,10 +2,15 @@
   <div class="row justify-content-between">
     <div class="col">
 
-      <%= link_to constructions_path, class:"navbar-brand" do %>
+      <%= link_to root_path, class:"navbar-brand" do %>
         <b style="font-family: bankgothic; font-weight: 900; font-size: 35px; width: 300px;">BURKUT</b>
+
+      <% end %>
+      <%= link_to constructions_path, class:"navbar-brand" do %>
+
         <span style="font-size: 20px;"> <%= t('navbar.construction') %></span>
       <% end %>
+
     </div>
     <div class="col d-flex justify-content-end">
       <div class="social-media">

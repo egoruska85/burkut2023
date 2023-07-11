@@ -38,3 +38,12 @@
        url("/fonts/5-font.otf") format("woff"),
        /* Если браузер не поддерживает woff2, загрузит woff */
 }
+@font-face {
+  font-family: "tilda-script-regular";
+
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("tilda-script-regular"),
+       /* Если не получилось, загрузит woff2 */
+       url("/fonts/tilda-script-regular.otf") format("woff"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+}

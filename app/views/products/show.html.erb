@@ -10,9 +10,17 @@
 <body>
   <%= render '/products/navbar/navbar' %>
   <%= render 'lang/lang' %>
-  <%= @product.title_ru %>
-  <hr>
+  <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+    <center>
+      <h1 style="font-family: tilda-script-regular; color: #AC172B; font-size: 100px;">
+        <%= @product.title_ru %>
+      </h1>
+    </center>
+  </div>
+
+<h1></h1>
   <% @product.dependproducts.each do |depend| %>
     <%= depend.title_ru %>
   <% end %>
+  <%= render 'factories/footer' %>
 </body>
