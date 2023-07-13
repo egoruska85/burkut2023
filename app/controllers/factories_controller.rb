@@ -7,7 +7,10 @@ class FactoriesController < ApplicationController
     @factoryabout = Factoryabout.last
 
     @motto = Motto.last
-    
+
+
+    @products = Product.all
+
 
     if params[:locale] != true and params[:locale] != 'en' and params[:locale] != 'tm' and params[:locale] != 'ru'
       @factory_service = @factoryabout.service_ru.upcase

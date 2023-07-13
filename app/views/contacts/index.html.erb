@@ -133,10 +133,10 @@
                 </div>
                 <div class="text">
                   <p><span><%= t('contact.address')%>
-                          <%= @contact_detail.address_ru if params[:locale] != true and params[:locale] != 'en' and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-                          <%= @contact_detail.address_ru if params[:locale] == 'ru' %>
-                          <%= @contact_detail.address_en if params[:locale] == 'en' %>
-                          <%= @contact_detail.address_tm if params[:locale] == 'tm' %></p>
+                          <%= @contact_detail_construction.address_ru if params[:locale] != true and params[:locale] != 'en' and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+                          <%= @contact_detail_construction.address_ru if params[:locale] == 'ru' %>
+                          <%= @contact_detail_construction.address_en if params[:locale] == 'en' %>
+                          <%= @contact_detail_construction.address_tm if params[:locale] == 'tm' %></p>
                 </div>
               </div>
             </div>
@@ -147,21 +147,21 @@
                 </div>
                 <div class="text">
                   <p><span><%= t('contact.phone')%></span>
-                    <%= phone_to '+' + "#{@contact_detail.phone1}" %>;
-                    <%= phone_to '+' + "#{@contact_detail.phone2}" %>;
-                    <%= phone_to '+' + "#{@contact_detail.phone2}" %>;<br>
-                    <%= phone_to '+' + "#{@contact_detail.phone2}" %> - <%= t('contact.fax')%>
+                    <%= phone_to '+' + "#{@contact_detail_construction.phone1}" %>;
+                    <%= phone_to '+' + "#{@contact_detail_construction.phone2}" %>;
+                    <%= phone_to '+' + "#{@contact_detail_construction.phone2}" %>;<br>
+                    <%= phone_to '+' + "#{@contact_detail_construction.phone2}" %> - <%= t('contact.fax')%>
                   </p>
                 </div>
               </div>
             </div>
             <div class="col-md-3">
-              <div class="dbox w-100 text-center">
+              <div class="dbox w-100 text-center">@contact_detail_construction
                 <div class="icon d-flex align-items-center justify-content-center">
                   <span class="fa fa-paper-plane"></span>
                 </div>
                 <div class="text">
-                  <p><span>Emails: </span><%= mail_to @contact_detail.email1 %>; <%= mail_to @contact_detail.email2 %></p>
+                  <p><span>Emails: </span><%= mail_to @contact_detail_construction.email1 %>; <%= mail_to @contact_detail_construction.email2 %></p>
 
                 </div>
               </div>

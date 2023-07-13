@@ -60,7 +60,8 @@ class ApplicationController < ActionController::Base
     end
   end
   def contact_details
-    @contact_detail = Contactdetail.last
+    @contact_detail = Contactdetail.first
+    @contact_detail_construction = Contactdetail.last
   end
 
   protected

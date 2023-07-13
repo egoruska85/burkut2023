@@ -1,0 +1,2 @@
+module FactorycontactsHelper
+end

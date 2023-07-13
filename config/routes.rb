@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   scope "(:locale)", :locale => /ru|en|tm/ do
     mount RailsAdmin::Engine => '/rails_admin', as: 'rails_admin'
     devise_for :users
@@ -10,13 +11,16 @@ Rails.application.routes.draw do
     resources :projects, path: '/constructions/projects', only: [ :index, :show ]
     resources :contacts, path: '/constructions/contacts'
 
-  
+
 
     get "/factories", to: 'factories#index'
 
     resources :products, path: '/factories/products', only: [ :index, :show ]
+    resources :factorycontacts, path: 'factories/factorycontacts', only: :index
 
     resources :admin, only: :index
+
+
 
     # Defines the root path route ("/")
     # root "articles#index"
