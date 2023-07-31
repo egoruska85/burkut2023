@@ -140,7 +140,7 @@
 
     <div class="container">
 
-      <div class="itc-slider" data-slider="itc-slider" data-loop="true" data-autoplay="true">
+      <div class="itc-slider" data-slider="itc-slider" data-loop="true" data-autoplay="true" style="z-index: 9999909999;">
         <div class="itc-slider-wrapper" style="background: rgba(76, 175, 80, 0)">
           <div class="itc-slider-items">
             <% @products.each do |product| %>
@@ -150,7 +150,7 @@
                   <center>
                     <%= link_to product_path(product), style:'text-decoration: none;' do %>
                       <div class="rounded" style="background: #AC172B;">
-                        <h1 style="font-family: ArbatC; color: white;"><%= product.title_ru %></h1>
+                        <h1 style="font-family: tilda-script-regular; color: white;"><%= product.title_ru %></h1>
                       </div>
                       <%= image_tag(product.picture, style:'width: 70%;') %>
                     <% end %>

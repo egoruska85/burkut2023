@@ -1,2 +1,97 @@
-<h1>Factorycontacts#index</h1>
-<p>Find me in app/views/factorycontacts/index.html.erb</p>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="/css/flaticon.css">
+    <link rel="stylesheet" href="/css/icomoon.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <%= render 'factorycontacts/navbar/navbar' %>
+    <%= render 'lang/lang' %>
+    <div class="container">
+      <center><h1 style="font-family: ArbatC; color: #AC172B;"><%= t('contact.write') %></h1></center>
+      <% flash.each do |type, msg| %>
+        <div class="alert alert-danger">
+          <center><%= msg %></center>
+        </div>
+      <% end %>
+
+      <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded row" style="background: #fefcea; background: linear-gradient(to top, #fefcea, #f1da36); padding: 10px; border: 1px solid #333;">
+        <div class="col-lg-6 col-sm-12">
+          <div class="row">
+            <div class="col-6">
+              <span style="font-family: bankgothic; font-size: 20px;"><%= t('contact.address')%></span>
+            </div>
+            <div class="col-6">
+              <b>
+                <%= @contact_detail_factory.address_ru if params[:locale] != true and params[:locale] != 'en' and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+                <%= @contact_detail_factory.address_ru if params[:locale] == 'ru' %>
+                <%= @contact_detail_factory.address_en if params[:locale] == 'en' %>
+                <%= @contact_detail_factory.address_tm if params[:locale] == 'tm' %>
+              </b>
+            </div>
+          </div>
+
+
+
+
+        <hr>
+
+          <div class="row">
+            <div class="col-6">
+              <span style="font-family: bankgothic; font-size: 20px;"><%= t('contact.phone')%></span>
+            </div>
+            <div class="col-6">
+              <b>
+                <%= phone_to '+' + "#{@contact_detail_construction.phone1}", style:'text-decoration: none;' %>;
+                <%= phone_to '+' + "#{@contact_detail_construction.phone2}", style:'text-decoration: none;' %>;
+                <%= phone_to '+' + "#{@contact_detail_construction.phone2}", style:'text-decoration: none;' %>;
+                <%= phone_to '+' + "#{@contact_detail_construction.phone2}", style:'text-decoration: none;' %> - <%= t('contact.fax')%>
+            </b>
+            </div>
+          </div>
+
+
+      <hr>
+      <div class="row">
+        <div class="col-6">
+          <span style="font-family: bankgothic; font-size: 20px;">Emails:</span>
+        </div>
+        <div class="col-6">
+          <b>
+            <%= mail_to @contact_detail_construction.email1, style:'text-decoration: none;' %>; <%= mail_to @contact_detail_construction.email2, style:'text-decoration: none;' %>
+        </b>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-6">
+          <span style="font-family: bankgothic; font-size: 20px;">Website:</span>
+        </div>
+        <div class="col-6">
+          <b>
+            <a href="burkut.biz" style="text-decoration: none;">BURKUT.BIZ</a>
+        </b>
+        </div>
+      </div>
+      <hr>
+
+
+        </div>
+        <div class="col-lg-6 col-sm-12">
+          <%= render 'form' %>
+        </div>
+
+      </div>
+
+    </div>
+    <%= render 'factories/footer2'%>
+  </body>
+</html>
