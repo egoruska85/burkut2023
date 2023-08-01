@@ -33,12 +33,12 @@
           <center>
             <%= image_tag(depend.picture, style:'width: 100%;') %>
 
-              <h3 style="color: #AC172B; font-family: tilda-script-regular;">
+              <h5 style="color: #AC172B; font-family: tilda-script-regular;">
                 <%= depend.title_ru if params[:locale] != true and params[:locale] != 'en' and params[:locale] != 'tm' and params[:locale] != 'ru' %>
                 <%= depend.title_ru if params[:locale] == 'ru' %>
                 <%= depend.title_en if params[:locale] == 'en' %>
                 <%= depend.title_tm if params[:locale] == 'tm' %>
-              </h3>
+              </h5>
 
 
           </center>
