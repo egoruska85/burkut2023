@@ -1,4 +1,5 @@
 ru:
+  page_title: "BURKUT- главная"
   navbar:
     construction: "СТРОИТЕЛЬСТВО"
     factory: "производство"
@@ -39,4 +40,4 @@ ru:
     sertificates: "НАШИ СЕРТИФИКАТЫ И ДИПЛОМЫ"
     our_production: "НАШ АССОРТИМЕНТ"
   product:
-    tastes: "Вкусы"  
+    tastes: "Вкусы"

@@ -1,4 +1,5 @@
 class FactoriesController < ApplicationController
+  before_action :set_page_option
   def index
     @a = -1
     @factorycarouuseles = Factorycarouusel.where(id: 2..100)
@@ -26,5 +27,8 @@ class FactoriesController < ApplicationController
       @factory_about = @factoryabout.body_tm
     end
     @factorycertificates = Factorycertificate.all
+  end
+  def set_page_option
+    @page_title = t('navbar.confectionery_factory').capitalize!
   end
 end

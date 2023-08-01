@@ -138,7 +138,7 @@
   <div class="parallax2">
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-    <div class="container">
+    <div class="container fixed2">
 
       <div class="itc-slider" data-slider="itc-slider" data-loop="true" data-autoplay="true" style="z-index: 9999909999;">
         <div class="itc-slider-wrapper" style="background: rgba(76, 175, 80, 0)">
@@ -149,10 +149,10 @@
 
                   <center>
                     <%= link_to product_path(product), style:'text-decoration: none;' do %>
-                      <div class="rounded" style="background: #AC172B;">
-                        <h1 style="font-family: tilda-script-regular; color: white;"><%= product.title_ru %></h1>
+                      <div class="rounded" style="background: #AC172B; width: 200px;">
+                        <h3 style="font-family: tilda-script-regular; color: white;"><%= product.title_ru %></h3>
                       </div>
-                      <%= image_tag(product.picture, style:'width: 70%;') %>
+                      <%= image_tag(product.picture, style:'width: 50%;') %>
                     <% end %>
                   </center>
 

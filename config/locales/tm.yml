@@ -1,4 +1,5 @@
 tm:
+  page_title: "BURKUT- baş"
   navbar:
     construction: "gurluşyk"
     factory: "zawod"
@@ -39,4 +40,4 @@ tm:
     sertificates: "BIZIERT KERTIFIKATLARYMYZ WE DIPLOMLARymyz"
     our_production: "BIZI R DÖWRÜMIZ"
   product:
-    tastes: "Tagamlar"  
+    tastes: "Tagamlar"

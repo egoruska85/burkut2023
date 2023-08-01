@@ -31,6 +31,7 @@
 
 en:
   hello: "Hello world"
+  page_title: "BURKUT- main"
   navbar:
     construction: "construction"
     factory: "factory"
@@ -71,4 +72,4 @@ en:
     sertificates: "OUR CERTIFICATES AND DIPLOMS"
     our_production: "OUR RANGE"
   product:
-    tastes: "Tastes"  
+    tastes: "Tastes"

@@ -1,4 +1,5 @@
 class ConstructionsController < ApplicationController
+  before_action :set_page_option
   def index
 
     @constructioncertificate = Constructioncertificate.all
@@ -94,5 +95,9 @@ class ConstructionsController < ApplicationController
 
 
 
+  end
+  private
+  def set_page_option
+    @page_title = t('navbar.construction').capitalize!
   end
 end

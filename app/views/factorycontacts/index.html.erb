@@ -16,7 +16,11 @@
     <%= render 'factorycontacts/navbar/navbar' %>
     <%= render 'lang/lang' %>
     <div class="container">
-      <center><h1 style="font-family: ArbatC; color: #AC172B;"><%= t('contact.write') %></h1></center>
+      <div class="sticky-top">
+        <br><br><br>
+        <center><h1 style="font-family: tilda-script-regular; color: #AC172B;"><%= t('contact.write') %></h1></center>
+      </div>
+
       <% flash.each do |type, msg| %>
         <div class="alert alert-danger">
           <center><%= msg %></center>
@@ -87,6 +91,12 @@
         </div>
         <div class="col-lg-6 col-sm-12">
           <%= render 'form' %>
+          <hr>
+          <div id="map" class="col-12 map rounded">
+            <script src="https://api-maps.yandex.ru/2.1/?apikey=<%= @key %>&lang=ru_RU" type="text/javascript"></script>
+
+            <script async src="/js/ymaps_const-factory.js"></script>
+          </div>
         </div>
 
       </div>

@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_action :set_page_option
   def index
     #@header_picture = Pictureheaderonproject.last
     @projects = Project.limit(9)
@@ -21,5 +22,8 @@ class ProjectsController < ApplicationController
       @project_title = @project.title_tm.upcase
       @project_desc = @project.desc_tm
     end
+  end
+  def set_page_option
+    @page_title = t('navbar.construction').capitalize! + ' - ' + t('navbar.projects')
   end
 end

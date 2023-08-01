@@ -4,19 +4,19 @@
       <div class="modal-header">
         <div class="row">
           <div class="col-3">
-            <%= link_to url_for(locale: :ru), :class => "navi" do %>
+            <%= link_to url_for(locale: :ru), :class => "navi", :style => "text-decoration: none;" do %>
               <%= image_tag "/assets/ru.png", :class => "flag" %>
               RUS
             <% end %>
           </div>
           <div class="col-3">
-            <%= link_to url_for(locale: :en), :class => "navi" do %>
+            <%= link_to url_for(locale: :en), :class => "navi", :style => "text-decoration: none;" do %>
               <%= image_tag "/assets/en.png", :class => "flag" %>
               ENG
             <% end %>
           </div>
           <div class="col-3">
-            <%= link_to url_for(locale: :tm), :class => "navi" do %>
+            <%= link_to url_for(locale: :tm), :class => "navi", :style => "text-decoration: none;" do %>
               <%= image_tag "/assets/tm.png", :class => "flag" %>
               TKM
             <% end %>
