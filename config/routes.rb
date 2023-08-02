@@ -18,9 +18,13 @@ Rails.application.routes.draw do
     resources :products, path: '/factories/products', only: [ :index, :show ]
     resources :factorycontacts, path: 'factories/factorycontacts', only: :index
 
-    resources :admin, only: :index
+    resources :admin do
+      member {get :editlogo}
+      member {get :editnophoto}
+    end
 
-
+    resources :logos
+    resources :nophotos
 
     # Defines the root path route ("/")
     # root "articles#index"

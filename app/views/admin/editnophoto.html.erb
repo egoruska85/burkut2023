@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <center>
+      <h1 style="font-family: bankgothic;">ПАНЕЛЬ АДМИНИСТРАТОРА</h1>
+    </center>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4">
+
+        </div>
+        <div class="col-lg-4">
+          <%= form_for :nophoto, url: nophoto_path(@nophoto), method: :put do |f| %>
+            <%= f.label 'Выберите картинку', class:"form-label" %>
+            <%= f.file_field :img, class:'form-control'%>
+            <br>
+            <%= image_tag(@nophoto.img, style:'width: 70px;') %>
+            <br>
+            <br>
+            <%= f.submit 'Изменить', class:'btn btn-success' %>
+          <% end %>
+        </div>
+        <div class="col-lg-4">
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

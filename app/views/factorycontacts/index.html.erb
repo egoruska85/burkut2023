@@ -16,7 +16,7 @@
     <%= render 'factorycontacts/navbar/navbar' %>
     <%= render 'lang/lang' %>
     <div class="container">
-      <div class="sticky-top">
+      <div class="sticky-top" style="z-index: 8;">
         <br><br><br>
         <center><h1 style="font-family: tilda-script-regular; color: #AC172B;"><%= t('contact.write') %></h1></center>
       </div>
@@ -54,10 +54,10 @@
             </div>
             <div class="col-6">
               <b>
-                <%= phone_to '+' + "#{@contact_detail_construction.phone1}", style:'text-decoration: none;' %>;
-                <%= phone_to '+' + "#{@contact_detail_construction.phone2}", style:'text-decoration: none;' %>;
-                <%= phone_to '+' + "#{@contact_detail_construction.phone2}", style:'text-decoration: none;' %>;
-                <%= phone_to '+' + "#{@contact_detail_construction.phone2}", style:'text-decoration: none;' %> - <%= t('contact.fax')%>
+                <%= phone_to '+' + "#{@contact_detail_factory.phone1}", style:'text-decoration: none;' %>;
+                <%= phone_to '+' + "#{@contact_detail_factory.phone2}", style:'text-decoration: none;' %>;
+                <%= phone_to '+' + "#{@contact_detail_factory.phone2}", style:'text-decoration: none;' %>;
+                <%= phone_to '+' + "#{@contact_detail_factory.phone2}", style:'text-decoration: none;' %> - <%= t('contact.fax')%>
             </b>
             </div>
           </div>
@@ -70,7 +70,7 @@
         </div>
         <div class="col-6">
           <b>
-            <%= mail_to @contact_detail_construction.email1, style:'text-decoration: none;' %>; <%= mail_to @contact_detail_construction.email2, style:'text-decoration: none;' %>
+            <%= mail_to @contact_detail_factory.email1, style:'text-decoration: none;' %>; <%= mail_to @contact_detail_factory.email2, style:'text-decoration: none;' %>
         </b>
         </div>
       </div>
