@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <center>
+      <h1 style="font-family: bankgothic;">ПАНЕЛЬ АДМИНИСТРАТОРА</h1>
+    </center>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-2">
+
+        </div>
+        <div class="col-lg-7">
+          <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+            <center>
+              <h5>Контактные данные и адреса</h5>
+            </center>
+            <%= form_for :contactdetail, url: contactdetail_path(@contactdetail), method: :put do |f| %>
+            <div class="row">
+              <div class="col-6">
+                <%= f.label 'Email 1', class:"form-label" %>
+                <%= f.text_field :email1, class:'form-control'%>
+
+                <%= f.label 'Email 2', class:"form-label" %>
+                <%= f.text_field :email2, class:'form-control'%>
+
+                <%= f.label 'Email 3', class:"form-label" %>
+                <%= f.text_field :email3, class:'form-control'%>
+
+                </div>
+                <div class="col-6">
+                  <%= f.label 'Номер телефона 1', class:"form-label" %>
+                  <%= f.text_field :phone1, class:'form-control'%>
+                  <%= f.label 'Номер телефона 2', class:"form-label" %>
+                  <%= f.text_field :phone2, class:'form-control'%>
+                  <%= f.label 'Номер телефона 3', class:"form-label" %>
+                  <%= f.text_field :phone3, class:'form-control'%>
+                  <%= f.label 'Факс', class:"form-label" %>
+                  <%= f.text_field :phone4, class:'form-control'%>
+                  <br>
+                </div>
+                <div class="col-4">
+                  <%= f.label 'Адрес на русском', class:"form-label" %>
+                  <%= f.text_area :address_ru, class:'form-control', rows:'4' %>
+                </div>
+                <div class="col-4">
+                  <%= f.label 'Адрес на английском', class:"form-label" %>
+                  <%= f.text_area :address_en, class:'form-control', rows:'4' %>
+                </div>
+                <div class="col-4">
+                  <%= f.label 'Адрес на туркменском', class:"form-label" %>
+                  <%= f.text_area :address_tm, class:'form-control', rows:'4' %>
+                </div>
+            </div>
+
+<br>
+                <center>
+                  <%= f.submit 'Изменить', class:'btn btn-success' %>
+                </center>
+              <% end %>
+
+
+          </div>
+        </div>
+        <div class="col-lg-3">
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

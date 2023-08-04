@@ -3,10 +3,15 @@ class AdminController < ApplicationController
   before_action :authenticate_user!
   before_action :redirect
   def index
-    @nophotos = Nophoto.all
     @logos = Logo.all
     @logo = Logo.new
+    @nophotos = Nophoto.all
     @nophoto = Nophoto.new
+    @contactdetails = Contactdetail.all
+    @contactdetail = Contactdetail.new
+    ####################################
+    @maincarousels = Maincarousel.all
+    @maincarousel = Maincarousel.new
 
   end
 
@@ -15,6 +20,12 @@ class AdminController < ApplicationController
   end
   def editnophoto
     @nophoto = Nophoto.find(params[:id])
+  end
+  def editcontacts
+    @contactdetail = Contactdetail.find(params[:id])
+  end
+  def editmaincarousels
+    @maincarousel = Maincarousel.find(params[:id])
   end
 
   private
