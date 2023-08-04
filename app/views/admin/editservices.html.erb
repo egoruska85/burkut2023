@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <center>
+      <h1 style="font-family: bankgothic;">ПАНЕЛЬ АДМИНИСТРАТОРА</h1>
+       <div class="row">
+         <div class="col-lg-3">
+
+         </div>
+         <div class="col-lg-6">
+           <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+             <center><h4>Услуги по строительству</h4></center>
+             <%= form_for :service, url: service_path(@service), method: :put do |f| %>
+               <div class="row">
+                 <div class="col-4">
+                   <%= f.label 'Заголовок на русском', class:"form-label" %>
+                   <%= f.text_area :title_ru, class:'form-control form-control-sm' %>
+                 </div>
+                 <div class="col-4">
+                   <%= f.label 'Заголовок на английском', class:"form-label" %>
+                   <%= f.text_area :title_en, class:'form-control form-control-sm' %>
+                 </div>
+                 <div class="col-4">
+                   <%= f.label 'Заголовок на туркменском', class:"form-label" %>
+                   <%= f.text_area :title_tm, class:'form-control form-control-sm' %>
+                 </div>
+               </div>
+               <div class="row">
+                 <div class="col-4">
+                   <%= f.label 'Заголовок на русском', class:"form-label" %>
+                   <%= f.text_area :body_ru, class:'form-control form-control-sm' %>
+                 </div>
+                 <div class="col-4">
+                   <%= f.label 'Заголовок на английском', class:"form-label" %>
+                   <%= f.text_area :body_en, class:'form-control form-control-sm' %>
+                 </div>
+                 <div class="col-4">
+                   <%= f.label 'Заголовок на туркменском', class:"form-label" %>
+                   <%= f.text_area :body_tm, class:'form-control form-control-sm' %>
+                 </div>
+               </div>
+
+               <div class="row">
+                 <div class="col-lg-4">
+
+                 </div>
+                 <div class="col-lg-4">
+                   <%= f.label 'Выберите иконку', class:"form-label" %>
+                   <%= f.file_field :icon, class:'form-control form-control-sm' %>
+                 </div>
+                 <div class="col-lg-4">
+
+                 </div>
+               </div>
+               <br>
+               <%= f.submit 'Добавить', class:'btn btn-success', style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" %>
+             <% end %>
+
+
+           </div>
+         </div>
+         <div class="col-lg-3">
+
+         </div>
+       </div>
+    </center>
+  </body>
+</html>

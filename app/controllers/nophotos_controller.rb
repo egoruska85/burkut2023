@@ -21,6 +21,11 @@ class NophotosController < ApplicationController
       redirect_to request.referrer, notice: "Ошибка проверьте правильность полей"
     end
   end
+  def destroy
+    @nophoto = Nophoto.find(params[:id])
+    @nophoto.destroy
+    redirect_to admin_path, notice: "Удалено"
+  end
   private
   def nophoto_params
     params.require(:nophoto).permit(:img)

@@ -23,12 +23,14 @@ Rails.application.routes.draw do
       member {get :editnophoto}
       member {get :editcontacts}
       member {get :editmaincarousels}
+      member {get :editservices}
     end
 
     resources :logos
     resources :nophotos
     resources :contactdetails
     resources :maincarousels
+    resources :services
 
     # Defines the root path route ("/")
     # root "articles#index"

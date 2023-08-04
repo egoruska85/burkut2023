@@ -34,6 +34,12 @@
   <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
 </svg>
                           <% end %>
+                          <br><br>
+                          <%= button_to logo_path(logo), method: :delete, data: { turbo_confirm: 'Действительно удалить?'}, class: "btn btn-danger", style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" do %>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+    </svg>
+                          <% end %>
 
                         <% elsif logo.main == false %>
                           <%= link_to editlogo_admin_path(logo), class:'btn btn-success', style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" do %>
@@ -41,6 +47,12 @@
                             Фабрика  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
   <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
 </svg>
+                          <% end %>
+                          <br><br>
+                          <%= button_to logo_path(logo), method: :delete, data: { turbo_confirm: 'Действительно удалить?'}, class: "btn btn-danger", style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" do %>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+    </svg>
                           <% end %>
                         <% end %>
 
@@ -67,6 +79,12 @@
                   <%= image_tag(img.img, style:'width: 30px;') %>  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
 <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
 </svg>
+                <% end %>
+                <br><br>
+                <%= button_to nophoto_path(img), method: :delete, data: { turbo_confirm: 'Действительно удалить?'}, class: "btn btn-danger", style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" do %>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+  </svg>
                 <% end %>
               <% end %>
 
@@ -149,72 +167,148 @@
             </div>
           </div>
         </div>
-
-      </div>
-      <center><h3 style="font-family: bankgothic;">СТРОИТЕЛЬСТВО</h3></center>
-      <br>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
-            <center><h4>Карусель строительство</h4></center>
-            <%= form_for :maincarousel, url: maincarousels_path do |f| %>
-            <div class="row">
-              <div class="col-4">
-                <%= f.label 'Заголовок на русском', class:"form-label" %>
-                <%= f.text_area :title_ru, class:'form-control form-control-sm' %>
-              </div>
-              <div class="col-4">
-                <%= f.label 'Заголовок на английском', class:"form-label" %>
-                <%= f.text_area :title_en, class:'form-control form-control-sm' %>
-              </div>
-              <div class="col-4">
-                <%= f.label 'Заголовок на туркменском', class:"form-label" %>
-                <%= f.text_area :title_tm, class:'form-control form-control-sm' %>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-4">
-                <%= f.label 'Текст на русском', class:"form-label" %>
-                <%= f.text_area :body_ru, class:'form-control form-control-sm' %>
-              </div>
-              <div class="col-4">
-                <%= f.label 'Текст на английском', class:"form-label" %>
-                <%= f.text_area :body_en, class:'form-control form-control-sm' %>
-              </div>
-              <div class="col-4">
-                <%= f.label 'Текст на туркменском', class:"form-label" %>
-                <%= f.text_area :body_tm, class:'form-control form-control-sm' %>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-6">
-                <%= f.label 'Ссылка на страничку', class:"form-label" %>
-                <%= f.text_field :link, class:'form-control form-control-sm' %>
-              </div>
-              <div class="col-6">
-                <%= f.label 'Текст на английском', class:"form-label" %>
-                <%= f.file_field :image, class:'form-control form-control-sm' %>
-              </div>
-
-            </div>
-            <br>
-            <%= f.submit 'Добавить', class:'btn btn-success', style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" %>
-            <% end %>
-            <hr>
+        <center><h3 style="font-family: bankgothic;">СТРОИТЕЛЬСТВО</h3></center>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+              <center><h4>Карусель строительство</h4></center>
+              <%= form_for :maincarousel, url: maincarousels_path do |f| %>
               <div class="row">
-                <% @maincarousels.each do |carousel| %>
+                <div class="col-4">
+                  <%= f.label 'Заголовок на русском', class:"form-label" %>
+                  <%= f.text_area :title_ru, class:'form-control form-control-sm' %>
+                </div>
+                <div class="col-4">
+                  <%= f.label 'Заголовок на английском', class:"form-label" %>
+                  <%= f.text_area :title_en, class:'form-control form-control-sm' %>
+                </div>
+                <div class="col-4">
+                  <%= f.label 'Заголовок на туркменском', class:"form-label" %>
+                  <%= f.text_area :title_tm, class:'form-control form-control-sm' %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <%= f.label 'Текст на русском', class:"form-label" %>
+                  <%= f.text_area :body_ru, class:'form-control form-control-sm' %>
+                </div>
+                <div class="col-4">
+                  <%= f.label 'Текст на английском', class:"form-label" %>
+                  <%= f.text_area :body_en, class:'form-control form-control-sm' %>
+                </div>
+                <div class="col-4">
+                  <%= f.label 'Текст на туркменском', class:"form-label" %>
+                  <%= f.text_area :body_tm, class:'form-control form-control-sm' %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <%= f.label 'Ссылка на страничку', class:"form-label" %>
+                  <%= f.text_field :link, class:'form-control form-control-sm' %>
+                </div>
+                <div class="col-6">
+                  <%= f.label 'Выберите картинку', class:"form-label" %>
+                  <%= f.file_field :image, class:'form-control form-control-sm' %>
+                </div>
+
+              </div>
+              <br>
+              <%= f.submit 'Добавить', class:'btn btn-success', style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" %>
+              <% end %>
+              <hr>
+                <div class="row">
+                  <% @maincarousels.each do |carousel| %>
+                    <div class="col-lg-3">
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <%= link_to editmaincarousels_admin_path(carousel), class: "btn btn-success", style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" do %>
+                            <%= carousel.id.to_s + ')' + ' Запись' %> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+          <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+          </svg>
+                          <% end %>
+
+                        </div>
+                        <div class="col-lg-6">
+                          <%= button_to maincarousel_path(carousel), method: :delete, data: { turbo_confirm: 'Действительно удалить?'}, class: "btn btn-danger", style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" do %>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+    </svg>
+                          <% end %>
+                        </div>
+                      </div>
+
+                    </div>
+                  <% end %>
+                </div>
+
+
+
+            </div>
+
+          </div>
+          <div class="col-lg-6">
+            <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+              <center><h4>Услуги по строительству</h4></center>
+              <%= form_for :service, url: services_path do |f| %>
+                <div class="row">
+                  <div class="col-4">
+                    <%= f.label 'Заголовок на русском', class:"form-label" %>
+                    <%= f.text_area :title_ru, class:'form-control form-control-sm' %>
+                  </div>
+                  <div class="col-4">
+                    <%= f.label 'Заголовок на английском', class:"form-label" %>
+                    <%= f.text_area :title_en, class:'form-control form-control-sm' %>
+                  </div>
+                  <div class="col-4">
+                    <%= f.label 'Заголовок на туркменском', class:"form-label" %>
+                    <%= f.text_area :title_tm, class:'form-control form-control-sm' %>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-4">
+                    <%= f.label 'Заголовок на русском', class:"form-label" %>
+                    <%= f.text_area :body_ru, class:'form-control form-control-sm' %>
+                  </div>
+                  <div class="col-4">
+                    <%= f.label 'Заголовок на английском', class:"form-label" %>
+                    <%= f.text_area :body_en, class:'form-control form-control-sm' %>
+                  </div>
+                  <div class="col-4">
+                    <%= f.label 'Заголовок на туркменском', class:"form-label" %>
+                    <%= f.text_area :body_tm, class:'form-control form-control-sm' %>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-4">
+
+                  </div>
+                  <div class="col-lg-4">
+                    <%= f.label 'Выберите иконку', class:"form-label" %>
+                    <%= f.file_field :icon, class:'form-control form-control-sm' %>
+                  </div>
+                  <div class="col-lg-4">
+
+                  </div>
+                </div>
+                <br>
+                <%= f.submit 'Добавить', class:'btn btn-success', style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" %>
+              <% end %>
+              <hr>
+              <div class="row">
+                <% @services.each do |service| %>
                   <div class="col-lg-3">
                     <div class="row">
                       <div class="col-lg-6">
-                        <%= link_to editmaincarousels_admin_path(carousel), class: "btn btn-success", style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" do %>
-                          <%= carousel.id.to_s + ')' + ' Запись' %> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                        <%= link_to editservices_admin_path(service), class: "btn btn-success", style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" do %>
+                          <%= service.id.to_s + ')' + ' Запись' %> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
         <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
         </svg>
                         <% end %>
 
                       </div>
                       <div class="col-lg-6">
-                        <%= button_to maincarousel_path(carousel), method: :delete, data: { turbo_confirm: 'Действительно удалить?'}, class: "btn btn-danger", style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" do %>
+                        <%= button_to service_path(service), method: :delete, data: { turbo_confirm: 'Действительно удалить?'}, class: "btn btn-danger", style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" do %>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
   <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
   </svg>
@@ -225,11 +319,14 @@
                   </div>
                 <% end %>
               </div>
-
-
-
+            </div>
           </div>
+
         </div>
+
       </div>
+
+      <br>
+
   </body>
 </html>

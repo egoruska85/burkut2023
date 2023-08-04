@@ -21,6 +21,11 @@ class LogosController < ApplicationController
       redirect_to request.referrer, notice: "Ошибка проверьте правильность полей"
     end
   end
+  def destroy
+    @logo = Logo.find(params[:id])
+    @logo.destroy
+    redirect_to admin_path, notice: "Удалено"
+  end
   private
   def logo_params
     params.require(:logo).permit(:logo, :main)
