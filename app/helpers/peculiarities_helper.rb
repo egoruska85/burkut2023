@@ -1,0 +1,2 @@
+module PeculiaritiesHelper
+end

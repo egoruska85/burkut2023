@@ -17,6 +17,15 @@ class AdminController < ApplicationController
 
     @services = Service.all
     @service = Service.new
+
+    @constructioncertificates = Constructioncertificate.all
+    @onstructioncertificate = Constructioncertificate.new
+
+    @peculiarities = Peculiarity.all
+    @peculiarity = Peculiarity.new
+
+    @constructionabouts = Constructionabout.all
+    @constructionabout = Constructionabout.new
   end
 
   def editlogo
@@ -33,6 +42,15 @@ class AdminController < ApplicationController
   end
   def editservices
     @service = Service.find(params[:id])
+  end
+  def editconstructioncertificates
+    @constructioncertificate = Constructioncertificate.find(params[:id])
+  end
+  def editpeculiarities
+    @peculiarity = Peculiarity.find(params[:id])
+  end
+  def editconstructionabouts
+    @constructionabout = Constructionabout.find(params[:id])
   end
   private
   def set_page_option

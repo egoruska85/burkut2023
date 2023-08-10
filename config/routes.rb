@@ -24,6 +24,9 @@ Rails.application.routes.draw do
       member {get :editcontacts}
       member {get :editmaincarousels}
       member {get :editservices}
+      member {get :editconstructioncertificates}
+      member {get :editpeculiarities}
+      member {get :editconstructionabouts}
     end
 
     resources :logos
@@ -31,7 +34,9 @@ Rails.application.routes.draw do
     resources :contactdetails
     resources :maincarousels
     resources :services
-
+    resources :constructioncertificates
+    resources :peculiarities
+    resources :constructionabouts
     # Defines the root path route ("/")
     # root "articles#index"
   end

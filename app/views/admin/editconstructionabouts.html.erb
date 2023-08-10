@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <center>
+      <h1 style="font-family: bankgothic;">ПАНЕЛЬ АДМИНИСТРАТОРА</h1>
+      <div class="row">
+        <div class="col-lg-3">
+
+        </div>
+        <div class="col-lg-6">
+          <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+            <center><h4>О НАС СТРОИТЕЛЬСТВО</h4></center>
+            <%= form_for :constructionabout, url: constructionabout_path(@constructionabout), method: :put do |f| %>
+              <div class="row">
+                <div class="col-12">
+                  <center>
+                  <%= f.label 'Название организации', class:"form-label" %>
+                  <%= f.text_field :title_organization, class:'form-control form-control-sm', style:'width:400px;'%>
+                  </center>
+                </div>
+
+                <div class="col-lg-4">
+                  <%= f.label 'Девиз организации на русском', class:"form-label" %>
+                  <%= f.text_area :motto_ru, class:'form-control form-control-sm' %>
+                </div>
+                <div class="col-lg-4">
+                  <%= f.label 'Девиз организации на английском', class:"form-label" %>
+                  <%= f.text_area :motto_en, class:'form-control form-control-sm' %>
+                </div>
+                <div class="col-lg-4">
+                  <%= f.label 'Девиз организации на туркменском', class:"form-label" %>
+                  <%= f.text_area :motto_tm, class:'form-control form-control-sm' %>
+                </div>
+                <div class="col-lg-4">
+                  <%= f.label 'О нас на русском', class:"form-label" %>
+                  <%= f.text_area :about_ru, class:'form-control form-control-sm' %>
+                </div>
+                <div class="col-lg-4">
+                  <%= f.label 'О нас на английском', class:"form-label" %>
+                  <%= f.text_area :about_en, class:'form-control form-control-sm' %>
+                </div>
+                <div class="col-lg-4">
+                  <%= f.label 'О нас на туркменском', class:"form-label" %>
+                  <%= f.text_area :about_tm, class:'form-control form-control-sm' %>
+                </div>
+                <div class="col-lg-4">
+                  <%= f.label 'Видинье на русском', class:"form-label" %>
+                  <%= f.text_area :vision_ru, class:'form-control form-control-sm' %>
+                </div>
+                <div class="col-lg-4">
+                  <%= f.label 'Видинье на английском', class:"form-label" %>
+                  <%= f.text_area :vision_en, class:'form-control form-control-sm' %>
+                </div>
+                <div class="col-lg-4">
+                  <%= f.label 'Видинье на туркменском', class:"form-label" %>
+                  <%= f.text_area :vision_tm, class:'form-control form-control-sm' %>
+                </div>
+                <div class="col-lg-4">
+                  <%= f.label 'Наши ценности на русском', class:"form-label" %>
+                  <%= f.text_area :values_ru, class:'form-control form-control-sm', rows:'6' %>
+                </div>
+                <div class="col-lg-4">
+                  <%= f.label 'Наши ценности на английском', class:"form-label" %>
+                  <%= f.text_area :values_en, class:'form-control form-control-sm', rows:'6' %>
+                </div>
+                <div class="col-lg-4">
+                  <%= f.label 'Наши ценности на туркменском', class:"form-label" %>
+                  <%= f.text_area :values_tm, class:'form-control form-control-sm', rows:'6' %>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+                <div class="col-lg-4">
+                  <%= f.label 'Наши ценности на туркменском', class:"form-label" %>
+                  <%= f.file_field :picture, class:'form-control form-control-sm' %>
+                </div>
+                <div class="col-lg-4">
+                  <%= f.label 'Наши ценности на туркменском', class:"form-label" %>
+                  <%= f.file_field :video, class:'form-control form-control-sm' %>
+                </div>
+
+              </div>
+              <br>
+              <%= f.submit 'Редактировать', class:'btn btn-success', style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" %>
+            <% end %>
+            <hr>
+
+          </div>
+        </div>
+        <div class="col-lg-3">
+
+        </div>
+      </div>
+    </center>
+  </body>
+</html>
