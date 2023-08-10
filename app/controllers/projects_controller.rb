@@ -23,6 +23,36 @@ class ProjectsController < ApplicationController
       @project_desc = @project.desc_tm
     end
   end
+  def new
+
+
+  end
+  def create
+    @project = Project.new(project_params)
+
+    if @project.save
+      redirect_to request.referrer, notice: "Опубликовано"
+    else
+      redirect_to request.referrer, notice: "Ошибка проверьте правильность полей"
+    end
+  end
+  def update
+    @project = Project.find(params[:id])
+    if @product.update(project_params)
+      redirect_to admin_path, notice: "Изменено"
+    else
+      redirect_to request.referrer, notice: "Ошибка проверьте правильность полей"
+    end
+  end
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
+    redirect_to admin_path, notice: "Удалено"
+  end
+  private
+  def project_params
+    params.require(:project).permit(:title_ru, :title_en, :title_tm, :body_ru, :body_en, :body_tm, :pictures => [])
+  end
   def set_page_option
     @page_title = t('navbar.construction').capitalize! + ' - ' + t('navbar.projects')
   end

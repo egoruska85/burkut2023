@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <center><h1 style="font-family: bankgothic;">ПАНЕЛЬ АДМИНИСТРАТОРА</h1></center>
+
+      <div class="row">
+        <div class="col-lg-4">
+
+        </div>
+        <div class="col-lg-4">
+          <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+            <center><h4></h4>КАРТИНКА НА СТРАНИЧКУ НАШИ ПРОЕКТЫ</center>
+          <%= form_for :pictureheaderonproject, url: pictureheaderonproject_path(@pictureheaderonproject), method: :put do |f| %>
+
+            <%= f.label 'Выберите картинки', class:"form-label" %>
+            <%= f.file_field :header_picture, class:'form-control form-control-sm' %>
+            <br>
+          <%= f.submit 'Редактировать', class:'btn btn-success', style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" %>
+          <% end %>
+          <hr>
+          <%= image_tag(@pictureheaderonproject.header_picture, style:'width: 100%;') %>
+        </div>
+      </div>
+        </div>
+        <div class="col-lg-4">
+
+        </div>
+
+  </body>
+</html>

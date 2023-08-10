@@ -26,6 +26,12 @@ class AdminController < ApplicationController
 
     @constructionabouts = Constructionabout.all
     @constructionabout = Constructionabout.new
+
+    @projects = Project.all
+    @project = Project.new
+
+    @pictureheaderonprojects = Pictureheaderonproject.all
+    @pictureheaderonproject = Pictureheaderonproject.new
   end
 
   def editlogo
@@ -51,6 +57,12 @@ class AdminController < ApplicationController
   end
   def editconstructionabouts
     @constructionabout = Constructionabout.find(params[:id])
+  end
+  def editprojects
+    @project = Project.find(params[:id])
+  end
+  def editpictureheaderonprojects
+    @pictureheaderonproject = Pictureheaderonproject.find(params[:id])
   end
   private
   def set_page_option

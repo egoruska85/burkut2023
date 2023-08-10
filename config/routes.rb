@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     root "main#index"
     get '/constructions', to: 'constructions#index'
 
-    resources :projects, path: '/constructions/projects', only: [ :index, :show ]
+    resources :projects, path: '/constructions/projects', only: [ :index, :show, :new, :create, :update, :destroy ]
     resources :contacts, path: '/constructions/contacts'
 
 
@@ -27,6 +27,8 @@ Rails.application.routes.draw do
       member {get :editconstructioncertificates}
       member {get :editpeculiarities}
       member {get :editconstructionabouts}
+      member {get :editprojects}
+      member {get :editpictureheaderonprojects}
     end
 
     resources :logos
@@ -37,6 +39,8 @@ Rails.application.routes.draw do
     resources :constructioncertificates
     resources :peculiarities
     resources :constructionabouts
+    resources :pictureheaderonprojects
+
     # Defines the root path route ("/")
     # root "articles#index"
   end

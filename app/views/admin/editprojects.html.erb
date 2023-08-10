@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-lg-3">
+
+      </div>
+      <div class="col-lg-6">
+        <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+          <center><h4>НАШИ ПРОЕКТЫ</h4></center>
+          <%= form_for :project, url: project_path(@project), method: :put do |f| %>
+            <div class="row">
+              <div class="col-4">
+                <%= f.label 'Заголовок на русском', class:"form-label" %>
+                <%= f.text_area :title_ru, class:'form-control form-control-sm' %>
+              </div>
+              <div class="col-4">
+                <%= f.label 'Заголовок на английском', class:"form-label" %>
+                <%= f.text_area :title_en, class:'form-control form-control-sm' %>
+              </div>
+              <div class="col-4">
+                <%= f.label 'Заголовок на туркменском', class:"form-label" %>
+                <%= f.text_area :title_tm, class:'form-control form-control-sm' %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <%= f.label 'Заголовок на русском', class:"form-label" %>
+                <%= f.text_area :desc_ru, class:'form-control form-control-sm' %>
+              </div>
+              <div class="col-4">
+                <%= f.label 'Заголовок на английском', class:"form-label" %>
+                <%= f.text_area :desc_en, class:'form-control form-control-sm' %>
+              </div>
+              <div class="col-4">
+                <%= f.label 'Заголовок на туркменском', class:"form-label" %>
+                <%= f.text_area :desc_tm, class:'form-control form-control-sm' %>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-4">
+
+              </div>
+              <div class="col-lg-4">
+                <%= f.label 'Выберите картинки', class:"form-label" %>
+                <%= f.file_field :pictures, multiple: true, class:'form-control form-control-sm' %>
+
+              </div>
+              <div class="col-lg-4">
+
+              </div>
+            </div>
+            <br>
+            <%= f.submit 'Редактировать', class:'btn btn-success', style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" %>
+          <% end %>
+
+
+        </div>
+
+      </div>
+      <div class="col-lg-3">
+
+      </div>
+    </div>
+  </body>
+</html>
