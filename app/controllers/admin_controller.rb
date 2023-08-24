@@ -1,7 +1,6 @@
 class AdminController < ApplicationController
-  before_action :set_page_option
-  before_action :authenticate_user!
-  before_action :redirect
+  before_action :set_page_option, :authenticate_user!, :redirect
+
   def index
     @logos = Logo.all
     @logo = Logo.new
@@ -32,6 +31,12 @@ class AdminController < ApplicationController
 
     @pictureheaderonprojects = Pictureheaderonproject.all
     @pictureheaderonproject = Pictureheaderonproject.new
+
+    @factorycarouusels = Factorycarouusel.all
+    @factorycarouusel = Factorycarouusel.new
+
+    @factoryabouts = Factoryabout.all
+    @factoryabout = Factoryabout.new
   end
 
   def editlogo
@@ -63,6 +68,12 @@ class AdminController < ApplicationController
   end
   def editpictureheaderonprojects
     @pictureheaderonproject = Pictureheaderonproject.find(params[:id])
+  end
+  def editfactorycarouusels
+    @factorycarouusel = Factorycarouusel.find(params[:id])
+  end
+  def editfactoryabouts
+    @factoryabout = Factoryabout.find(params[:id])
   end
   private
   def set_page_option

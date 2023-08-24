@@ -29,6 +29,8 @@ Rails.application.routes.draw do
       member {get :editconstructionabouts}
       member {get :editprojects}
       member {get :editpictureheaderonprojects}
+      member {get :editfactorycarouusels}
+      member {get :editfactoryabouts}
     end
 
     resources :logos
@@ -40,6 +42,9 @@ Rails.application.routes.draw do
     resources :peculiarities
     resources :constructionabouts
     resources :pictureheaderonprojects
+
+    resources :factorycarouusels
+    resources :factoryabouts
 
     # Defines the root path route ("/")
     # root "articles#index"

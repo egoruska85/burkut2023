@@ -2,8 +2,8 @@ class FactoriesController < ApplicationController
   before_action :set_page_option
   def index
     @a = -1
-    @factorycarouuseles = Factorycarouusel.where(id: 2..100)
-    @factorycarousel_active = Factorycarouusel.first
+    @factorycarouusels = Factorycarouusel.where(id: 2..100)
+    @factorycarouusel_active = Factorycarouusel.first
 
     @factoryabout = Factoryabout.last
 
