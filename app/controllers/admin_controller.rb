@@ -44,6 +44,11 @@ class AdminController < ApplicationController
     @factorycertificates = Factorycertificate.all
     @factorycertificate = Factorycertificate.new
 
+    @categories = Category.all
+    @category = Category.new
+
+    @products = Product.all
+    @product = Product.new
   end
 
   def editlogo
@@ -87,6 +92,12 @@ class AdminController < ApplicationController
   end
   def editfactorycertificates
     @factorycertificate = Factorycertificate.find(params[:id])
+  end
+  def editcategories
+    @category = Category.find(params[:id])
+  end
+  def editproducts
+    @product = Product.find(params[:id])
   end
   private
   def set_page_option

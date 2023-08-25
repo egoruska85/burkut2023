@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <center><h1 style="font-family: bankgothic;">ПАНЕЛЬ АДМИНИСТРАТОРА</h1></center>
+    <div class="row">
+      <div class="col-lg-5">
+
+      </div>
+      <div class="col-lg-2">
+        <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+          <center><h5>Категория продукции</h5></center>
+          <%= form_for :category, url: category_path(@category), method: :put do |f| %>
+          <%= f.label 'Категория на русском', class:"form-label" %>
+          <%= f.text_field :title_ru, class:'form-control form-control-sm' %>
+          <%= f.label 'Категория на русском', class:"form-label" %>
+          <%= f.text_field :title_en, class:'form-control form-control-sm' %>
+          <%= f.label 'Категория на русском', class:"form-label" %>
+          <%= f.text_field :title_tm, class:'form-control form-control-sm' %>
+          <br>
+          <center><%= f.submit 'Редактировать', class:'btn btn-success', style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" %></center>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-lg-5">
+
+      </div>
+    </div>
+
+  </body>
+</html>

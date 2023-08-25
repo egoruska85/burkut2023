@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
     get "/factories", to: 'factories#index'
 
-    resources :products, path: '/factories/products', only: [ :index, :show ]
+    resources :products, path: '/factories/products', only: [ :index, :show, :new, :create, :update, :destroy ]
     resources :factorycontacts, path: 'factories/factorycontacts', only: :index
 
     resources :admin do
@@ -33,6 +33,8 @@ Rails.application.routes.draw do
       member {get :editfactoryabouts}
       member {get :editslogans}
       member {get :editfactorycertificates}
+      member {get :editcategories}
+      member {get :editproducts}
     end
 
     resources :logos
@@ -48,6 +50,7 @@ Rails.application.routes.draw do
     resources :factoryabouts
     resources :slogans
     resources :factorycertificates
+    resources :categories
 
 
     # Defines the root path route ("/")

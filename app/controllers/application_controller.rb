@@ -17,6 +17,7 @@ class ApplicationController < ActionController::Base
   end
   def set_variable
   #@organization = Organization.first
+    @categories = Category.all
 
     @time = Time.now
     @main_carousel = Maincarousel.all
