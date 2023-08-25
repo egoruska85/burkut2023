@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <center>
+      <h1 style="font-family: bankgothic;">ПАНЕЛЬ АДМИНИСТРАТОРА</h1>
+      <hr>
+      <h3 style="font-family: bankgothic;">ФАБРИКА</h3>
+    </center>
+    <div class="container-fluid">
+      <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+        <%= form_for :slogan, url: slogan_path(@slogan), method: :put do |f| %>
+        <div class="row">
+          <div class="col-lg-2">
+            <center><h4>Девиз фабрики</h4></center>
+          </div>
+          <div class="col-lg-3">
+            <%= f.label 'Текст на русском', class:"form-label" %>
+            <%= f.text_area :title_ru, class:'form-control form-control-sm' %>
+          </div>
+          <div class="col-lg-3">
+            <%= f.label 'Текст на английском', class:"form-label" %>
+            <%= f.text_area :title_en, class:'form-control form-control-sm' %>
+          </div>
+          <div class="col-lg-3">
+            <%= f.label 'Текст на туркменском', class:"form-label" %>
+            <%= f.text_area :title_tm, class:'form-control form-control-sm' %>
+          </div>
+          <div class="col-lg-1">
+            <br><br>
+            <%= f.submit 'Редактировать', class:'btn btn-success', style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" %>
+          </div>
+          <br><br><br><br>
+          <hr>
+
+        </div>
+        <% end %>
+      </div>
+  </body>
+</html>

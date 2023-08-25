@@ -37,6 +37,13 @@ class AdminController < ApplicationController
 
     @factoryabouts = Factoryabout.all
     @factoryabout = Factoryabout.new
+
+    @slogans = Slogan.all
+    @slogan = Slogan.new
+
+    @factorycertificates = Factorycertificate.all
+    @factorycertificate = Factorycertificate.new
+
   end
 
   def editlogo
@@ -74,6 +81,12 @@ class AdminController < ApplicationController
   end
   def editfactoryabouts
     @factoryabout = Factoryabout.find(params[:id])
+  end
+  def editslogans
+    @slogan = Slogan.find(params[:id])
+  end
+  def editfactorycertificates
+    @factorycertificate = Factorycertificate.find(params[:id])
   end
   private
   def set_page_option

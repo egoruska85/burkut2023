@@ -124,10 +124,10 @@
     <center><br><br>
       <b style="font-family: Bold Script; font-weight: 900; font-size: 35px; width: 300px; color: white;">BURKUT - </b>
       <b style="font-family: ArbatC; font-size: 30px; color: white;">
-        <%= @motto.title_ru if params[:locale] != true and params[:locale] != 'en' and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-        <%= @motto.title_ru if params[:locale] == 'ru' %>
-        <%= @motto.title_en if params[:locale] == 'en' %>
-        <%= @motto.title_tm if params[:locale] == 'tm' %>
+        <%= @slogan.title_ru if params[:locale] != true and params[:locale] != 'en' and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+        <%= @slogan.title_ru if params[:locale] == 'ru' %>
+        <%= @slogan.title_en if params[:locale] == 'en' %>
+        <%= @slogan.title_tm if params[:locale] == 'tm' %>
       </b>
     </center>
     <center style="font-family: ArbatC; font-size: 30px; color: white;">

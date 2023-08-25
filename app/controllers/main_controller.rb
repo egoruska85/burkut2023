@@ -1,7 +1,6 @@
 class MainController < ApplicationController
   before_action :set_page_option
   def index
-    @mainabout = Mainabout.first
 
   end
   private

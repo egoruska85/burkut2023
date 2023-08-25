@@ -1,2 +1,0 @@
-class Motto < ApplicationRecord
-end

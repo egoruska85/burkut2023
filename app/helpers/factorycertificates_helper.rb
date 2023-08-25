@@ -1,0 +1,2 @@
+module FactorycertificatesHelper
+end

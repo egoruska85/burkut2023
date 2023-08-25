@@ -7,7 +7,7 @@ class FactoriesController < ApplicationController
 
     @factoryabout = Factoryabout.last
 
-    @motto = Motto.last
+    @slogan = Slogan.last
 
 
     @products = Product.all
