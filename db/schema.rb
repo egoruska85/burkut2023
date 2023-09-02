@@ -142,17 +142,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_24_202302) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "mainabouts", force: :cascade do |t|
-    t.string "title_ru"
-    t.string "title_en"
-    t.string "title_tm"
-    t.text "body_ru"
-    t.text "body_en"
-    t.text "body_tm"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "maincarousels", force: :cascade do |t|
     t.string "title_ru"
     t.string "title_en"
@@ -161,14 +150,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_24_202302) do
     t.string "body_ru"
     t.string "body_en"
     t.string "body_tm"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "mottos", force: :cascade do |t|
-    t.string "title_ru"
-    t.string "title_en"
-    t.string "title_tm"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

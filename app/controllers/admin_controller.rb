@@ -49,6 +49,9 @@ class AdminController < ApplicationController
 
     @products = Product.all
     @product = Product.new
+
+    @dependproducts = Dependproduct.all
+    @dependproduct = Dependproduct.new
   end
 
   def editlogo
@@ -98,6 +101,9 @@ class AdminController < ApplicationController
   end
   def editproducts
     @product = Product.find(params[:id])
+  end
+  def editdependproducts
+    @dependproduct = Dependproduct.find(params[:id])
   end
   private
   def set_page_option

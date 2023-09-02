@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <center><h1 style="font-family: bankgothic;">ПАНЕЛЬ АДМИНИСТРАТОРА</h1></center>
+    <div class="container_fluid">
+      <div class="row">
+        <div class="col-lg-4">
+
+        </div>
+        <div class="col-lg-4">
+          <center><h5>Содержимое продукции</h5></center>
+          <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+            <%= form_for :dependproduct, url: dependproduct_path(@dependproduct), method: :put do |f| %>
+              <%= f.label 'Название на русском', class:"form-label" %>
+              <%= f.text_field :title_ru, class:'form-control form-control-sm' %>
+              <%= f.label 'Название на английском', class:"form-label" %>
+              <%= f.text_field :title_en, class:'form-control form-control-sm' %>
+              <%= f.label 'Название на туркменском', class:"form-label" %>
+              <%= f.text_field :title_tm, class:'form-control form-control-sm' %>
+              <%= f.label 'Продукция', class:"form-label" %>
+              <%= f.select :product_id, options_for_select(@products.collect{ |product| [product.title_ru, product.id] }, @dependproduct.product_id), {}, {class: "form-control form-control-sm"} %>
+              <%= f.label 'Картинка', class:"form-label" %>
+              <%= f.file_field :picture, class:'form-control form-control-sm' %>
+              <br>
+              <%= f.submit 'Редактировать', class:'btn btn-success', style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" %>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-lg-4">
+
+        </div>
+      </div>
+      <div class="col-lg-4">
+      </div>
+    </div>
+  </body>
+</html>

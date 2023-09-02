@@ -35,6 +35,7 @@ Rails.application.routes.draw do
       member {get :editfactorycertificates}
       member {get :editcategories}
       member {get :editproducts}
+      member {get :editdependproducts}
     end
 
     resources :logos
@@ -51,6 +52,7 @@ Rails.application.routes.draw do
     resources :slogans
     resources :factorycertificates
     resources :categories
+    resources :dependproducts
 
 
     # Defines the root path route ("/")

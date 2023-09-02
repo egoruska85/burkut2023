@@ -91,7 +91,28 @@ class ConstructionsController < ApplicationController
       @service_4_title = @service_4.title_tm
       @service_4_body = @service_4.body_tm
     end
-
+    @construction_about = Constructionabout.first
+    if params[:locale] != true and params[:locale] != 'en' and params[:locale] != 'tm' and params[:locale] != 'ru'
+      @construction_motto = @construction_about.motto_ru
+      @construction_about_about = @construction_about.about_ru
+      @construction_about_vision = @construction_about.vision_ru
+      @construction_about_values = @construction_about.values_ru
+    elsif params[:locale] == 'ru'
+      @construction_motto = @construction_about.motto_ru
+      @construction_about_about = @construction_about.about_ru
+      @construction_about_vision = @construction_about.vision_ru
+      @construction_about_values = @construction_about.values_ru
+    elsif params[:locale] == 'en'
+      @construction_motto = @construction_about.motto_en
+      @construction_about_about = @construction_about.about_en
+      @construction_about_vision = @construction_about.vision_en
+      @construction_about_values = @construction_about.values_en
+    elsif params[:locale] == 'tm'
+      @construction_motto = @construction_about.motto_tm
+      @construction_about_about = @construction_about.about_tm
+      @construction_about_vision = @construction_about.vision_tm
+      @construction_about_values = @construction_about.values_tm
+    end
 
 
 
